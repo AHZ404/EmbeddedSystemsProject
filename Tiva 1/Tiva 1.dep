@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>5</fileVersion>
-    <fileChecksum>3603512785</fileChecksum>
+    <fileChecksum>3807343385</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -42,6 +42,7 @@
             <file>$PROJ_DIR$\keypad.c</file>
             <file>$PROJ_DIR$\lcd.c</file>
             <file>$PROJ_DIR$\keypad.h</file>
+            <file>$PROJ_DIR$\..\Tiva 2\main.c</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>

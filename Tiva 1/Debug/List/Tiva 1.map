@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  07/Dec/2025  13:38:26
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  07/Dec/2025  14:11:48
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =
@@ -23,8 +23,6 @@
 #        Semester Senior 1\Introduction to Enbedded
 #        Systems\Project\Working\Tiva 1\Debug\Obj\systick.o" "D:\University\7th
 #        Semester Senior 1\Introduction to Enbedded
-#        Systems\Project\Working\Tiva 1\Debug\Obj\test_keypad.o"
-#        "D:\University\7th Semester Senior 1\Introduction to Enbedded
 #        Systems\Project\Working\Tiva 1\Debug\Obj\uart.o" --no_out_extension -o
 #        "D:\University\7th Semester Senior 1\Introduction to Enbedded
 #        Systems\Project\Working\Tiva 1\Debug\Exe\Tiva 1.out" --redirect
@@ -36,17 +34,6 @@
 #        __iar_program_start --vfe --text_out locale)
 #
 ###############################################################################
-
-*******************************************************************************
-*** MESSAGES
-***
-
-Error[Li006]: duplicate definitions for "main"; in "D:\University\7th Semester 
-          Senior 1\Introduction to Enbedded Systems\Project\Working\Tiva 1\Debu
-          g\Obj\main.o"
-          , and "D:\University\7th Semester Senior 1\Introduction to Enbedded S
-          ystems\Project\Working\Tiva 1\Debug\Obj\test_keypad.o"
-
 
 *******************************************************************************
 *** RUNTIME MODEL ATTRIBUTES
@@ -78,62 +65,56 @@ define block PROC_STACK with size = 0, alignment = 8 { };
 define block HEAP with size = 2K, alignment = 8 { };
 "P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
           rw, block CSTACK, block PROC_STACK, block HEAP };
-initialize by copy { rw };
 
-  Section            Kind         Address   Size  Object
-  -------            ----         -------   ----  ------
-"A0":                                       0x40
-  .intvec            ro code          0x0   0x40  vector_table_M.o [4]
-                                   - 0x40   0x40
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                     0x40
+  .intvec          ro code          0x0   0x40  vector_table_M.o [3]
+                                 - 0x40   0x40
 
-"P1":                                      0xa30
-  .text              ro code         0x40  0x3e8  dio.o [1]
-  .text              ro code        0x428  0x1c2  lcd.o [1]
-  .text              ro code        0x5ea   0x2a  copy_init3.o [4]
-  .text              ro code        0x614  0x140  main.o [1]
-  .text              ro code        0x754   0xcc  keypad.o [1]
-  .text              ro code        0x820   0xd8  uart.o [1]
-  .text              ro code        0x8f8   0x30  systick.o [1]
-  .text              ro code        0x928   0x2c  iarttio.o [5]
-  .text              ro code        0x954    0x8  XShttio.o [2]
-  .text              ro code        0x95c   0x28  data_init.o [4]
-  .iar.init_table    const          0x984   0x14  - Linker created -
-  .text              ro code        0x998   0x1e  cmain.o [4]
-  .text              ro code        0x9b6    0x4  low_level_init.o [2]
-  .text              ro code        0x9ba    0x4  exit.o [2]
-  .text              ro code        0x9be    0x2  vectortrap_M.o [4]
-  .text              ro code        0x9c0    0xa  cexit.o [4]
-  .text              ro code        0x9cc   0x14  exit.o [5]
-  .text              ro code        0x9e0   0x1c  cstartup_M.o [4]
-  .rodata            const          0x9fc   0x10  keypad.o [1]
-  .rodata            const          0xa0c   0x10  main.o [1]
-  .rodata            const          0xa1c   0x10  main.o [1]
-  .rodata            const          0xa2c   0x10  main.o [1]
-  .rodata            const          0xa3c   0x10  main.o [1]
-  .rodata            const          0xa4c    0xc  main.o [1]
-  .rodata            const          0xa58    0xc  main.o [1]
-  Initializer bytes  const          0xa64    0xc  <for P2-1> (used: 0x0)
-  .rodata            const          0xa70    0x0  copy_init3.o [4]
-                                  - 0xa70  0xa30
+"P1":                                    0xa18
+  .text            ro code         0x40  0x3ec  dio.o [1]
+  .text            ro code        0x42c  0x1c6  lcd.o [1]
+  .text            ro code        0x5f2    0x2  vectortrap_M.o [3]
+  .text            ro code        0x5f4  0x150  main.o [1]
+  .text            ro code        0x744   0xcc  keypad.o [1]
+  .text            ro code        0x810   0xdc  uart.o [1]
+  .text            ro code        0x8ec   0x30  systick.o [1]
+  .text            ro code        0x91c   0x38  zero_init3.o [3]
+  .text            ro code        0x954   0x28  data_init.o [3]
+  .iar.init_table  const          0x97c   0x10  - Linker created -
+  .text            ro code        0x98c   0x1e  cmain.o [3]
+  .text            ro code        0x9aa    0x4  low_level_init.o [2]
+  .text            ro code        0x9ae    0x4  exit.o [2]
+  .text            ro code        0x9b4    0xa  cexit.o [3]
+  .text            ro code        0x9c0   0x14  exit.o [4]
+  .text            ro code        0x9d4   0x1c  cstartup_M.o [3]
+  .rodata          const          0x9f0   0x10  keypad.o [1]
+  .rodata          const          0xa00   0x10  main.o [1]
+  .rodata          const          0xa10   0x10  main.o [1]
+  .rodata          const          0xa20   0x10  main.o [1]
+  .rodata          const          0xa30   0x10  main.o [1]
+  .rodata          const          0xa40    0xc  main.o [1]
+  .rodata          const          0xa4c    0xc  main.o [1]
+  .rodata          const          0xa58    0x0  zero_init3.o [3]
+                                - 0xa58  0xa18
 
-"P2", part 1 of 2:                           0xc
-  P2-1                        0x2000'0000    0x9  <Init block>
-    .data            inited   0x2000'0000    0x8  XShttio.o [2]
-    .bss             inited   0x2000'0008    0x1  systick.o [1]
-                            - 0x2000'0009    0x9
+"P2", part 1 of 2:                         0x4
+  .bss             zero     0x2000'0000    0x1  systick.o [1]
+                          - 0x2000'0001    0x1
 
-"P2", part 2 of 2:                         0x400
-  CSTACK                      0x2000'0010  0x400  <Block>
-    CSTACK           uninit   0x2000'0010  0x400  <Block tail>
-                            - 0x2000'0410  0x400
+"P2", part 2 of 2:                       0x400
+  CSTACK                    0x2000'0008  0x400  <Block>
+    CSTACK         uninit   0x2000'0008  0x400  <Block tail>
+                          - 0x2000'0408  0x400
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0xa70     0x7'ffff  0x7'f590
-  0x2000'000c  0x2000'000f       0x4
-  0x2000'0410  0x2000'ffff    0xfbf0
+        0xa58     0x7'ffff  0x7'f5a8
+  0x2000'0004  0x2000'0007       0x4
+  0x2000'0408  0x2000'ffff    0xfbf8
 
 
 *******************************************************************************
@@ -142,11 +123,9 @@ Unused ranges:
 
           Address      Size
           -------      ----
-Copy (__iar_copy_init3)
-    1 source range, total size 0xc (133% of destination):
-                0xa64   0xc
-    1 destination range, total size 0x9:
-          0x2000'0000   0x9
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1:
+          0x2000'0000   0x1
 
 
 
@@ -161,47 +140,41 @@ command line/config:
     Total:
 
 D:\University\7th Semester Senior 1\Introduction to Enbedded Systems\Project\Working\Tiva 1\Debug\Obj: [1]
-    dio.o               1'000
+    dio.o               1'004
     keypad.o              204       16
-    lcd.o                 450
-    main.o                320       88
-    systick.o              48        1        1
-    uart.o                216
+    lcd.o                 454
+    main.o                336       88
+    systick.o              48                 1
+    uart.o                220
     -------------------------------------------
-    Total:              2'238      105        1
+    Total:              2'266      104        1
 
 dl7M_tln.a: [2]
-    XShttio.o               8        8        8
     exit.o                  4
     low_level_init.o        4
     -------------------------------------------
-    Total:                 16        8        8
+    Total:                  8
 
-m7M_tl.a: [3]
-    -------------------------------------------
-    Total:
-
-rt7M_tl.a: [4]
+rt7M_tl.a: [3]
     cexit.o                10
     cmain.o                30
-    copy_init3.o           42
     cstartup_M.o           28
     data_init.o            40
     vector_table_M.o       64
     vectortrap_M.o          2
+    zero_init3.o           56
     -------------------------------------------
-    Total:                216
+    Total:                230
 
-shb_l.a: [5]
+shb_l.a: [4]
     exit.o                 20
-    iarttio.o              44
     -------------------------------------------
-    Total:                 64
+    Total:                 20
 
-    Gaps                    2
-    Linker created                  23    1'024
+    Gaps                    4
+    Linker created                  16    1'024
 -----------------------------------------------
-    Grand Total:        2'536      136    1'033
+    Grand Total:        2'528      120    1'025
 
 
 *******************************************************************************
@@ -210,66 +183,62 @@ shb_l.a: [5]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base         0x984          --   Gb  - Linker created -
-.iar.init_table$$Limit        0x998          --   Gb  - Linker created -
-?main                         0x999         Code  Gb  cmain.o [4]
-BusFault_Handler              0x9bf         Code  Wk  vectortrap_M.o [4]
-CSTACK$$Base            0x2000'0010          --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'0410          --   Gb  - Linker created -
-DIO_Init                       0x41  0x29e  Code  Gb  dio.o [1]
-DIO_WritePin                  0x2df   0xa8  Code  Gb  dio.o [1]
-DebugMon_Handler              0x9bf         Code  Wk  vectortrap_M.o [4]
-DelayMs                       0x8f9   0x22  Code  Gb  systick.o [1]
-HardFault_Handler             0x9bf         Code  Wk  vectortrap_M.o [4]
-KEYS                          0x9fc   0x10  Data  Gb  keypad.o [1]
-Keypad_GetKey                 0x79f   0x5c  Code  Gb  keypad.o [1]
-Keypad_Init                   0x755   0x4a  Code  Gb  keypad.o [1]
-LCD_Char                      0x4ff   0x82  Code  Gb  lcd.o [1]
-LCD_Clear                     0x5ab   0x10  Code  Gb  lcd.o [1]
-LCD_Command                   0x47d   0x82  Code  Gb  lcd.o [1]
-LCD_Init                      0x429   0x54  Code  Gb  lcd.o [1]
-LCD_String                    0x595   0x16  Code  Gb  lcd.o [1]
-MemManage_Handler             0x9bf         Code  Wk  vectortrap_M.o [4]
-NMI_Handler                   0x9bf         Code  Wk  vectortrap_M.o [4]
-PendSV_Handler                0x9bf         Code  Wk  vectortrap_M.o [4]
-Region$$Table$$Base           0x984          --   Gb  - Linker created -
-Region$$Table$$Limit          0x998          --   Gb  - Linker created -
-SVC_Handler                   0x9bf         Code  Wk  vectortrap_M.o [4]
-SysTick_Handler               0x9bf         Code  Wk  vectortrap_M.o [4]
-UART0_DataAvailable           0x8bb   0x12  Code  Gb  uart.o [1]
-UART0_Init                    0x821   0x64  Code  Gb  uart.o [1]
-UART0_ReceiveChar             0x8ab   0x10  Code  Gb  uart.o [1]
-UART0_SendChar                0x885   0x10  Code  Gb  uart.o [1]
-UART0_SendString              0x895   0x16  Code  Gb  uart.o [1]
-UsageFault_Handler            0x9bf         Code  Wk  vectortrap_M.o [4]
-__cmain                       0x999         Code  Gb  cmain.o [4]
-__exit                        0x9cd   0x14  Code  Gb  exit.o [5]
-__iar_close_ttio              0x929   0x2c  Code  Gb  iarttio.o [5]
-__iar_copy_init3              0x5eb   0x2a  Code  Gb  copy_init3.o [4]
-__iar_data_init3              0x95d   0x28  Code  Gb  data_init.o [4]
-__iar_lookup_ttioh            0x955    0x8  Code  Gb  XShttio.o [2]
-__iar_program_start           0x9e1         Code  Gb  cstartup_M.o [4]
-__iar_ttio_handles      0x2000'0000    0x8  Data  Lc  XShttio.o [2]
-__low_level_init              0x9b7    0x4  Code  Gb  low_level_init.o [2]
-__vector_table                  0x0         Data  Gb  vector_table_M.o [4]
-_call_main                    0x9a5         Code  Gb  cmain.o [4]
-_exit                         0x9c1         Code  Gb  cexit.o [4]
-delayMs                       0x5bb   0x1a  Code  Gb  lcd.o [1]
-delayUs                       0x5d5   0x16  Code  Gb  lcd.o [1]
-exit                          0x9bb    0x4  Code  Gb  exit.o [2]
-interruptMode           0x2000'0008    0x1  Data  Lc  systick.o [1]
-main                          0x615  0x140  Code  Gb  main.o [1]
+.iar.init_table$$Base         0x97c          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x98c          --   Gb  - Linker created -
+?main                         0x98d         Code  Gb  cmain.o [3]
+BusFault_Handler              0x5f3         Code  Wk  vectortrap_M.o [3]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0408          --   Gb  - Linker created -
+DIO_Init                       0x41  0x2a0  Code  Gb  dio.o [1]
+DIO_WritePin                  0x2e1   0xac  Code  Gb  dio.o [1]
+DebugMon_Handler              0x5f3         Code  Wk  vectortrap_M.o [3]
+DelayMs                       0x8ed   0x22  Code  Gb  systick.o [1]
+HardFault_Handler             0x5f3         Code  Wk  vectortrap_M.o [3]
+KEYS                          0x9f0   0x10  Data  Gb  keypad.o [1]
+Keypad_GetKey                 0x78f   0x5c  Code  Gb  keypad.o [1]
+Keypad_Init                   0x745   0x4a  Code  Gb  keypad.o [1]
+LCD_Char                      0x505   0x84  Code  Gb  lcd.o [1]
+LCD_Clear                     0x5b3   0x10  Code  Gb  lcd.o [1]
+LCD_Command                   0x481   0x84  Code  Gb  lcd.o [1]
+LCD_Init                      0x42d   0x54  Code  Gb  lcd.o [1]
+LCD_String                    0x59d   0x16  Code  Gb  lcd.o [1]
+MemManage_Handler             0x5f3         Code  Wk  vectortrap_M.o [3]
+NMI_Handler                   0x5f3         Code  Wk  vectortrap_M.o [3]
+PendSV_Handler                0x5f3         Code  Wk  vectortrap_M.o [3]
+Region$$Table$$Base           0x97c          --   Gb  - Linker created -
+Region$$Table$$Limit          0x98c          --   Gb  - Linker created -
+SVC_Handler                   0x5f3         Code  Wk  vectortrap_M.o [3]
+SysTick_Handler               0x5f3         Code  Wk  vectortrap_M.o [3]
+UART0_DataAvailable           0x8ad   0x12  Code  Gb  uart.o [1]
+UART0_Init                    0x811   0x64  Code  Gb  uart.o [1]
+UART0_ReceiveChar             0x89d   0x10  Code  Gb  uart.o [1]
+UART0_SendChar                0x875   0x12  Code  Gb  uart.o [1]
+UART0_SendString              0x887   0x16  Code  Gb  uart.o [1]
+UsageFault_Handler            0x5f3         Code  Wk  vectortrap_M.o [3]
+__cmain                       0x98d         Code  Gb  cmain.o [3]
+__exit                        0x9c1   0x14  Code  Gb  exit.o [4]
+__iar_data_init3              0x955   0x28  Code  Gb  data_init.o [3]
+__iar_program_start           0x9d5         Code  Gb  cstartup_M.o [3]
+__iar_zero_init3              0x91d   0x38  Code  Gb  zero_init3.o [3]
+__low_level_init              0x9ab    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [3]
+_call_main                    0x999         Code  Gb  cmain.o [3]
+_exit                         0x9b5         Code  Gb  cexit.o [3]
+delayMs                       0x5c3   0x1a  Code  Gb  lcd.o [1]
+delayUs                       0x5dd   0x16  Code  Gb  lcd.o [1]
+exit                          0x9af    0x4  Code  Gb  exit.o [2]
+interruptMode           0x2000'0000    0x1  Data  Lc  systick.o [1]
+main                          0x5f5  0x150  Code  Gb  main.o [1]
 
 
 [1] = D:\University\7th Semester Senior 1\Introduction to Enbedded Systems\Project\Working\Tiva 1\Debug\Obj
 [2] = dl7M_tln.a
-[3] = m7M_tl.a
-[4] = rt7M_tl.a
-[5] = shb_l.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
 
-  2'536 bytes of readonly  code memory
-    136 bytes of readonly  data memory
-  1'033 bytes of readwrite data memory
+  2'528 bytes of readonly  code memory
+    120 bytes of readonly  data memory
+  1'025 bytes of readwrite data memory
 
-Errors: 1
+Errors: none
 Warnings: none

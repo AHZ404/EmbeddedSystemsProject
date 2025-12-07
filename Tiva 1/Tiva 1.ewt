@@ -2869,9 +2869,6 @@
         <name>$PROJ_DIR$\systick.h</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\test_keypad.c</name>
-    </file>
-    <file>
         <name>$PROJ_DIR$\tm4c123gh6pm.h</name>
     </file>
     <file>

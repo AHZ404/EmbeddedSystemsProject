@@ -1,4 +1,3 @@
-
 /*****************************************************************************
  * File: test_keypad.c
  * Description: Step-by-step keypad testing program
