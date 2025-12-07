@@ -1,0 +1,110 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\dio.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\dio.c" -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\keypad.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\keypad.c" -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\lcd.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\lcd.c" -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\main.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\main.c" -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\systick.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\systick.c" -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\test_keypad.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\test_keypad.c" -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\uart.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\uart.c" -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\dio.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\keypad.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\lcd.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\main.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\systick.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\test_keypad.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\uart.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1.pbw : MAKEBROWSE D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1.pbd
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1.pbd" -output "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1.pbw"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part0.pbi : PDBLINK D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.pbi |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.pbi $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.pbi
+  flags = -M "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part0.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\dio.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\keypad.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\lcd.pbi"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part1.pbi : PDBLINK D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.pbi |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.pbi $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.pbi
+  flags = -M "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part1.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\main.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\systick.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\test_keypad.pbi"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part2.pbi : PDBLINK D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.pbi
+  flags = -M "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part2.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\uart.pbi"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1.pbd : PDBLINK D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part0.pbi |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part1.pbi $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part2.pbi
+  flags = -M "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1.pbd" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part0.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part1.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\Working\Tiva$ 1\Debug\BrowseInfo\Tiva$ 1_part2.pbi"
+
