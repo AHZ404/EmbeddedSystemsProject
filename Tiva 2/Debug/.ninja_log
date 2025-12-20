@@ -1,8 +1,0 @@
-# ninja log v5
-10	364	7867988885242406	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/Working/Tiva 2/Debug/Obj/systick.o	b4ecc48ce1ce46da
-15	425	7867988885850469	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/Working/Tiva 2/Debug/Obj/dio.o	168b2d6f2f7a6d36
-1	227	7867992778301775	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/Working/Tiva 2/Debug/Obj/systick.o	b4ecc48ce1ce46da
-223	880	7868401428633438	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/Working/Tiva 2/Debug/Obj/password_db.o	15c6fc707b7898bd
-232	894	7868401428726824	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/Working/Tiva 2/Debug/Obj/uart_receiver.o	a9902f7114edf107
-1	908	7868401428633438	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/Working/Tiva 2/Debug/Obj/main.o	487209ffe1529bba
-922	1406	7868401434060688	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/Working/Tiva 2/Debug/Exe/Tiva 2.out	ae09250ab95b5d68
