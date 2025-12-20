@@ -1,0 +1,10 @@
+# ninja log v5
+1	445	7878988064391906	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Obj/keypad.o	e17c86f1520e2c87
+15	508	7878988065017838	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Obj/adc.o	f3ba339c7b731bf0
+9	526	7878988065005507	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Obj/dio.o	116c6b605bc5f33a
+20	604	7878988065968272	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Obj/lcd.o	1a34dc33bb4ad7f3
+33	635	7878988066208560	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Obj/systick.o	9e6b1f5b8a89df6e
+26	665	7878988066373390	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Obj/uart.o	aeb69fd795c4146c
+48	707	7878988067072226	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Obj/startup_ewarm.o	fdff4ca70b8beb1
+40	856	7878988068502726	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Obj/main.o	25a9773ec43d2fea
+868	943	7878988069406942	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/HMI/Debug/Exe/HMI.out	899151ee0d998b94

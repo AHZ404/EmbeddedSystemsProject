@@ -1,0 +1,10 @@
+# ninja log v5
+12	147	7878988152598297	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Obj/eeprom.o	aaed124aeedec99c
+39	183	7878988152768310	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Obj/startup_ewarm.o	f03cb8fd65ea6294
+16	199	7878988152951697	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Obj/buzzer.o	1b0c2386ec1f0e8d
+33	234	7878988153312910	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Obj/Servo.o	a12adc4a41b82029
+27	249	7878988153238224	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Obj/uart.o	e6646b9f3dca34cd
+22	263	7878988153289395	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Obj/systick.o	9a8324ff12efe871
+7	278	7878988153377349	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Obj/dio.o	a5fc3d41844ed697
+1	305	7878988153719447	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Obj/main.o	7a4a76fd79d2abc0
+320	407	7878988155273536	D:/University/7th Semester Senior 1/Introduction to Enbedded Systems/Project/adeem/Control/Debug/Exe/Control.out	d38accb20d75ebc3

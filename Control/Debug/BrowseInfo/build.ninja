@@ -1,0 +1,120 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\buzzer.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\buzzer.c" -D PART_TM4C123GH6PM -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\Programs\ti\ -I D$:\Programs\ti\inc\ -I D$:\Programs\ti\driverlib\ -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\dio.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\dio.c" -D PART_TM4C123GH6PM -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\Programs\ti\ -I D$:\Programs\ti\inc\ -I D$:\Programs\ti\driverlib\ -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\eeprom.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\eeprom.c" -D PART_TM4C123GH6PM -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\Programs\ti\ -I D$:\Programs\ti\inc\ -I D$:\Programs\ti\driverlib\ -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\main.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\main.c" -D PART_TM4C123GH6PM -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\Programs\ti\ -I D$:\Programs\ti\inc\ -I D$:\Programs\ti\driverlib\ -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Servo.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Servo.c" -D PART_TM4C123GH6PM -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\Programs\ti\ -I D$:\Programs\ti\inc\ -I D$:\Programs\ti\driverlib\ -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\startup_ewarm.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\startup_ewarm.c" -D PART_TM4C123GH6PM -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\Programs\ti\ -I D$:\Programs\ti\inc\ -I D$:\Programs\ti\driverlib\ -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\systick.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\systick.c" -D PART_TM4C123GH6PM -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\Programs\ti\ -I D$:\Programs\ti\inc\ -I D$:\Programs\ti\driverlib\ -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\uart.c" -xcl_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.xcl" -macro_file "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\uart.c" -D PART_TM4C123GH6PM -o "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\Programs\ti\ -I D$:\Programs\ti\inc\ -I D$:\Programs\ti\driverlib\ -On --predef_macros "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.tmp"
+  rspfile_name = D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.xcl.rsp
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\buzzer.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\dio.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\eeprom.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\main.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Servo.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\startup_ewarm.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\systick.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.pbi : INDEXER D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.xcl |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\uart.c
+  flags = "-out=D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.pbi" -f "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.xcl"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control.pbw : MAKEBROWSE D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control.pbd
+  flags = "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control.pbd" -output "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control.pbw"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part0.pbi : PDBLINK D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.pbi |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.pbi $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.pbi
+  flags = -M "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part0.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\buzzer.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\dio.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\eeprom.pbi"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part1.pbi : PDBLINK D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.pbi |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.pbi $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.pbi
+  flags = -M "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part1.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\main.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Servo.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\startup_ewarm.pbi"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part2.pbi : PDBLINK D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.pbi |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.pbi
+  flags = -M "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part2.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\systick.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\uart.pbi"
+
+build D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control.pbd : PDBLINK D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part0.pbi |  $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part1.pbi $
+D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part2.pbi
+  flags = -M "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control.pbd" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part0.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part1.pbi" "D$:\University\7th$ Semester$ Senior$ 1\Introduction$ to$ Enbedded$ Systems\Project\adeem\Control\Debug\BrowseInfo\Control_part2.pbi"
+
