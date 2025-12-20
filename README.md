@@ -20,14 +20,14 @@ Both units communicate via UART to implement a complete smart lock system with p
 │                    Smart Lock System                        │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  ┌────────────────────┐      UART      ┌────────────────┐ │
-│  │   HMI Unit        │◄────────────────►│ Control Unit   │ │
-│  │  (User Interface) │                  │  (Lock Logic)  │ │
-│  │                   │                  │                │ │
-│  │ - LCD Display     │                  │ - Servo Motor  │ │
-│  │ - Keypad Input    │                  │ - Buzzer       │ │
-│  │ - ADC (sensors)   │                  │ - EEPROM       │ │
-│  │                   │                  │ - System Timer │ │
+│  ┌────────────────────┐       UART       ┌────────────────┐ │
+│  │   HMI Unit         │◄────────────────►│ Control Unit   │ │
+│  │  (User Interface)  │                  │  (Lock Logic)  │ │
+│  │                    │                  │                │ │
+│  │ - LCD Display      │                  │ - Servo Motor  │ │
+│  │ - Keypad Input     │                  │ - Buzzer       │ │
+│  │ - ADC (sensors)    │                  │ - EEPROM       │ │
+│  │                    │                  │ - System Timer │ │
 │  └────────────────────┘                  └────────────────┘ │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
