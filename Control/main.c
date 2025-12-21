@@ -34,6 +34,7 @@ void Servo_Update(int open);
 char master_password[PASSWORD_MAX_LENGTH];
 uint32_t auto_lock_timeout = 5;
 int servo_open = 0; // 0 = Closed (0 deg), 1 = Open (90 deg)
+int authenticated = 0; // 0 = Not authenticated, 1 = Authenticated for settings changes
 
 int main(void)
 {
@@ -135,23 +136,45 @@ int main(void)
                         UART2_SendString("PWD_TOO_LONG\n");
                     }
                 }
-                // B. SET TIMEOUT
+                // B. SET TIMEOUT (only accept if authenticated)
                 else if(strncmp(rx_buffer, "TIMEOUT:", 8) == 0)
                 {
-                    auto_lock_timeout = stringToInt(rx_buffer + 8);
-                    if(EEPROM_WriteWord(EEPROM_TIMEOUT_BLOCK, EEPROM_TIMEOUT_OFFSET, auto_lock_timeout) == EEPROM_SUCCESS) {
-                        UART2_SendString("TIMEOUT_SAVED\n");
-                    } else {
-                        UART2_SendString("TIMEOUT_ERROR\n");
+                    if(authenticated == 1) // Only allow if user has verified password
+                    {
+                        auto_lock_timeout = stringToInt(rx_buffer + 8);
+                        if(EEPROM_WriteWord(EEPROM_TIMEOUT_BLOCK, EEPROM_TIMEOUT_OFFSET, auto_lock_timeout) == EEPROM_SUCCESS) {
+                            UART2_SendString("TIMEOUT_SAVED\n");
+                        } else {
+                            UART2_SendString("TIMEOUT_ERROR\n");
+                        }
+                        authenticated = 0; // Clear authentication flag after use
+                    }
+                    else
+                    {
+                        UART2_SendString("TIMEOUT_DENIED\n"); // User not authenticated
                     }
                 }
-                // C. VERIFY PASSWORD
+                // C. AUTHENTICATE PASSWORD FOR SETTINGS (no door open)
+                else if(strncmp(rx_buffer, "VERIFYPWD:", 10) == 0)
+                {
+                    // Check against current master password
+                    if(strcmp(master_password, rx_buffer + 10) == 0) {
+                        UART2_SendString("AUTH_OK\n");
+                        authenticated = 1; // Set authentication flag for settings changes
+                        // Note: No door open, just authenticate for settings
+                    } else {
+                        UART2_SendString("AUTH_FAILED\n");
+                        authenticated = 0;
+                    }
+                }
+                // D. VERIFY PASSWORD (opens door)
                 else if(strncmp(rx_buffer, "VERIFY:", 7) == 0)
                 {
                     // Check against current master password
                     if(strcmp(master_password, rx_buffer + 7) == 0) {
                         UART2_SendString("ALLOW\n");
                         GPIO_PORTF_DATA_R |= 0x08; // Green LED ON
+                        authenticated = 1; // Set authentication flag for settings changes
                         
                         // 1. Clear buffer immediately to ensure we catch the fresh "CLOSE" command
                         rx_index = 0;
@@ -172,11 +195,12 @@ int main(void)
                                  {
                                      rx_buffer[rx_index] = '\0'; // Null terminate
                                      
-                                     // --- THE CHECK YOU REQUESTED ---
+                                     // --- Check for CLOSE command ---
                                      if(strncmp(rx_buffer, "CLOSE", 5) == 0) 
                                      {
                                          Servo_SetAngle(0);           // Lock Door
                                          GPIO_PORTF_DATA_R &= ~0x08;  // Green LED OFF
+                                         authenticated = 0; // Clear authentication flag when exiting door open state
                                          
                                          // Clear buffer and Break the loop to return to main idle state
                                          rx_index = 0;
@@ -195,6 +219,7 @@ int main(void)
                         }
                     } else {
                         UART2_SendString("DENY\n");
+                        authenticated = 0; // Clear authentication flag on failed password
                         GPIO_PORTF_DATA_R |= 0x02; // Red LED ON
                         Delay_ms(500);
                         GPIO_PORTF_DATA_R &= ~0x02;

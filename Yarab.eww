@@ -6,5 +6,8 @@
     <project>
         <path>$WS_DIR$\HMI\HMI.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\Testing\Testing.ewp</path>
+    </project>
     <batchBuild />
 </workspace>

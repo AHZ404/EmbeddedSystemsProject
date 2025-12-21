@@ -67,16 +67,20 @@ char* ReceiveResponseFromControl()
 typedef enum {
     STATE_CREATE_PASS,          // Initial setup: Enter password
     STATE_CONFIRM_PASS,         // Initial setup: Confirm password
-    STATE_MAIN_MENU,            // Main operational menu (A, B, C)
+    STATE_MAIN_MENU,            // Main operational menu (A, B, C, D)
     STATE_VERIFY_PASS_A,        // Verify password for Action 'A' (Open)
-    STATE_LOCKOUT,              // System Lockout state (for 3 failures on 'A' or 'B')
+    STATE_LOCKOUT,              // System Lockout state (for 3 failures on 'A', 'B', 'C', or 'D')
     // States for Password Change (B)
     STATE_CHANGE_PASS_VERIFY,   // Step 1: Verify the old password
     STATE_CHANGE_PASS_NEW,      // Step 2: Enter the new password
     STATE_CHANGE_PASS_CONFIRM,  // Step 3: Confirm the new password
     // States for Timeout Adjustment (C)
     STATE_ADJUST_TIMEOUT,       // Reading Potentiometer/ADC value
-    STATE_VERIFY_PASS_C         // Final password verification for saving
+    STATE_VERIFY_PASS_C,        // Final password verification for saving
+    // States for Reset/Logout (D)
+    STATE_RESET_PASS_VERIFY,    // Verify old password before reset
+    STATE_RESET_CREATE_PASS,    // Enter new password after reset verification
+    STATE_RESET_CONFIRM_PASS    // Confirm new password after reset
 } PasswordState;
 
 int main(void)
@@ -145,6 +149,11 @@ int main(void)
     // Variables for 'C' (Timeout)
     int auto_lock_timeout = 10;     // Default timeout value (e.g., 10 seconds)
     int pot_value = 0;              // <-- FIX: Declared here to resolve Error[Pe020]
+    int adjusted_timeout = 0;       // Temporary timeout value during adjustment (not saved until password verified)
+    int attempts_C = 0;             // Tracks incorrect attempts for timeout verification
+
+    // Variables for 'D' (Reset/Logout)
+    int attempts_D = 0;             // Tracks incorrect attempts for 'D' password verification
     
     // ========== NEW: Variables for receiving password from TIVA 1 ==========
     char received_password[6] = "";      // Buffer to store password from TIVA 1
@@ -168,9 +177,9 @@ int main(void)
             state = STATE_MAIN_MENU;
             LCD_Clear();
             LCD_SetCursor(1, 0);
-            LCD_String("MainMenu> A:Open");
+            LCD_String("Menu>A:Ope B:PWD");
             LCD_SetCursor(2, 0);
-            LCD_String("B:PWD C:TMO"); // TMO for Timeout
+            LCD_String(" C:TMO  D:Reset");
             continue;
         }
 
@@ -237,15 +246,22 @@ int main(void)
                     LCD_String("Value: "); // Prepare to display the value
                 }
             }
-            // --- Action 'D': Lock System (Logout) ---
-            else if (key == 'D') { // Changed from 'C' to 'D' to use 'C' for timeout
-                state = STATE_CREATE_PASS; 
-                index = 0;
-                LCD_Clear();
-                LCD_String("Locked.");
-                delayMs(1000); 
-                LCD_Clear();
-                LCD_String("CreatePass:");
+            // --- Action 'D': Lock System (Logout) / Reset Password ---
+            else if (key == 'D') {
+                if (lock_system) {
+                    LCD_Clear();
+                    LCD_String("SYSTEM LOCKED");
+                    LCD_SetCursor(2, 0);
+                    LCD_String("Press '*' to Menu");
+                } else {
+                    index = 0;
+                    attempts_D = 0;
+                    state = STATE_RESET_PASS_VERIFY;
+                    LCD_Clear();
+                    LCD_SetCursor(1, 0);
+                    LCD_String("Verify Old Pwd:");
+                    LCD_SetCursor(2, 0);
+                }
             }
             
             continue;
@@ -266,8 +282,8 @@ int main(void)
             if (raw_timeout < 5) raw_timeout = 5;
             if (raw_timeout > 30) raw_timeout = 30;
             
-            // Live update the global variable and display
-            auto_lock_timeout = raw_timeout;
+            // Update the TEMPORARY adjusted_timeout variable (NOT the global auto_lock_timeout)
+            adjusted_timeout = raw_timeout;
             
             // Update display: Line 2 - "Value: XXs"
             LCD_SetCursor(2, 7); 
@@ -275,7 +291,7 @@ int main(void)
             LCD_SetCursor(2, 7);
             
             char timeout_str[4];
-            sprintf(timeout_str, "%d", auto_lock_timeout); 
+            sprintf(timeout_str, "%d", adjusted_timeout); 
             LCD_String(timeout_str);
             LCD_Char('s');
 
@@ -291,12 +307,13 @@ int main(void)
             }
             else if(key == '*') // '*' is used to cancel and return to menu
             {
+                adjusted_timeout = 0; // Clear the temporary timeout value
                 state = STATE_MAIN_MENU; 
                 LCD_Clear();
                 LCD_SetCursor(1, 0);
-                LCD_String("MainMenu> A:Open");
+                LCD_String("Menu>A:Opn B:PWD");
                 LCD_SetCursor(2, 0);
-                LCD_String("B:PWD C:TMO"); 
+                LCD_String(" C:TMO  D:Reset"); 
             }
             
             continue; 
@@ -324,59 +341,119 @@ int main(void)
                 
                 if(strcmp(pass, Confirmpass) == 0) // Correct Password
                 {
-                    // auto_lock_timeout is already updated in STATE_ADJUST_TIMEOUT
+                    attempts_C = 0; // Reset attempts on success
+                    // Password is correct - NOW update the global auto_lock_timeout with the adjusted value
+                    auto_lock_timeout = adjusted_timeout;
+                    
                     LCD_Clear();
                     LCD_String("Saving Timeout...");
                     
-                    // Send timeout value to Control ECU
-                    char timeout_cmd[20];
-                    sprintf(timeout_cmd, "TIMEOUT:%d", auto_lock_timeout);
-                    UART2_SendString(timeout_cmd);
+                    // First, authenticate with Control ECU using VERIFYPWD
+                    char verify_cmd[20];
+                    sprintf(verify_cmd, "VERIFYPWD:%s", pass);
+                    UART2_SendString(verify_cmd);
                     UART2_SendChar('\n');
+                    delayMs(100);
                     
-                    // Wait for response from Control ECU
-                    char* timeout_response = ReceiveResponseFromControl();
+                    // Wait for AUTH_OK response
+                    char* auth_response = ReceiveResponseFromControl();
                     
-                    if(strcmp(timeout_response, "TIMEOUT_SAVED") == 0)
+                    if(strcmp(auth_response, "AUTH_OK") == 0)
                     {
-                        LCD_Clear();
-                        LCD_String("Timeout Saved!");
-                        DIO_WritePin(PORTF, PIN3, HIGH); // Green LED for success
-                        delayMs(1500);
-                        DIO_WritePin(PORTF, PIN3, LOW);
+                        // Now send TIMEOUT command with authenticated session
+                        char timeout_cmd[20];
+                        sprintf(timeout_cmd, "TIMEOUT:%d", auto_lock_timeout);
+                        UART2_SendString(timeout_cmd);
+                        UART2_SendChar('\n');
+                        delayMs(100);
+                        
+                        // Wait for response from Control ECU
+                        char* timeout_response = ReceiveResponseFromControl();
+                        
+                        if(strcmp(timeout_response, "TIMEOUT_SAVED") == 0)
+                        {
+                            LCD_Clear();
+                            LCD_String("Timeout Saved!");
+                            DIO_WritePin(PORTF, PIN3, HIGH); // Green LED for success
+                            delayMs(1500);
+                            DIO_WritePin(PORTF, PIN3, LOW);
+                        }
+                        else
+                        {
+                            LCD_Clear();
+                            LCD_String("Error Saving TMO");
+                            LCD_SetCursor(2, 0);
+                            LCD_String("Please Retry");
+                            DIO_WritePin(PORTF, PIN1, HIGH); // Red LED for error
+                            delayMs(1500);
+                            DIO_WritePin(PORTF, PIN1, LOW);
+                        }
                     }
                     else
                     {
+                        // Authentication failed on Control side
                         LCD_Clear();
-                        LCD_String("Error Saving TMO");
+                        LCD_String("Auth Failed!");
                         LCD_SetCursor(2, 0);
-                        LCD_String("Please Retry");
+                        LCD_String("Timeout NOT Saved");
                         DIO_WritePin(PORTF, PIN1, HIGH); // Red LED for error
                         delayMs(1500);
                         DIO_WritePin(PORTF, PIN1, LOW);
                     }
 
+                    adjusted_timeout = 0; // Clear temporary timeout after save attempt
                     state = STATE_MAIN_MENU;
                     LCD_Clear();
                     LCD_SetCursor(1, 0);
-                    LCD_String("MainMenu> A:Open");
+                    LCD_String("Menu>A:Opn B:PWD");
                     LCD_SetCursor(2, 0);
-                    LCD_String("B:PWD C:TMO");
+                    LCD_String(" C:TMO  D:Reset");
                 }
                 else // Incorrect Password
                 {
-                    LCD_Clear();
-                    LCD_String("Incorrect PWD.");
-                    LCD_SetCursor(2, 0);
-                    LCD_String("Settings NOT Saved");
-                    delayMs(3000); 
-
-                    state = STATE_MAIN_MENU;
-                    LCD_Clear();
-                    LCD_SetCursor(1, 0);
-                    LCD_String("MainMenu> A:Open");
-                    LCD_SetCursor(2, 0);
-                    LCD_String("B:PWD C:TMO");
+                    attempts_C++;
+                    
+                    if (attempts_C >= 3)
+                    {
+                        // 3 failed attempts - System lockout
+                        adjusted_timeout = 0; // Clear the temporary timeout
+                        state = STATE_LOCKOUT;
+                        UART2_SendChar('L'); // Send lockout signal to Control
+                        
+                        LCD_Clear();
+                        LCD_String("3 Failed Attempts");
+                        LCD_SetCursor(2, 0);
+                        LCD_String("SYSTEM LOCKED!");
+                        delayMs(5000);
+                        
+                        // Reset after lockout
+                        attempts_C = 0;
+                        lock_system = false;
+                        state = STATE_MAIN_MENU;
+                        LCD_Clear();
+                        LCD_SetCursor(1, 0);
+                        LCD_String("Menu>A:Opn B:PWD");
+                        LCD_SetCursor(2, 0);
+                        LCD_String(" C:TMO  D:Reset");
+                    }
+                    else
+                    {
+                        // Show retry message with remaining attempts
+                        LCD_Clear();
+                        LCD_String("TMO NOT Saved");
+                        LCD_SetCursor(2, 0);
+                        LCD_String("Attempts Left: ");
+                        LCD_Char('3' - attempts_C); // Display remaining attempts (e.g., '2', '1')
+                        delayMs(2000);
+                        
+                        // Ask for password again
+                        LCD_Clear();
+                        LCD_SetCursor(1, 0);
+                        LCD_String("Enter Pwd:");
+                        LCD_SetCursor(2, 0);
+                        index = 0;
+                        memset(Confirmpass, 0, sizeof(Confirmpass));
+                    }
                 }
             }
             // C. Handle '*' (Clear/Cancel)
@@ -454,9 +531,9 @@ int main(void)
                             state = STATE_MAIN_MENU;
                             LCD_Clear();
                             LCD_SetCursor(1, 0);
-                            LCD_String("MainMenu> A:Open");
+                            LCD_String("Menu>A:Opn B:PWD");
                             LCD_SetCursor(2, 0);
-                            LCD_String("B:PWD C:TMO");
+                            LCD_String(" C:TMO  D:Reset");
                         } else {
                             LCD_Clear();
                             LCD_String("Old PWD Incorrect");
@@ -522,9 +599,9 @@ int main(void)
                         state = STATE_MAIN_MENU;
                         LCD_Clear();
                         LCD_SetCursor(1, 0);
-                        LCD_String("MainMenu> A:Open");
+                        LCD_String("Menu>A:Opn B:PWD");
                         LCD_SetCursor(2, 0);
-                        LCD_String("B:PWD C:TMO");
+                        LCD_String(" C:TMO  D:Reset");
                     }
                     else // New Passwords Mismatch
                     {
@@ -564,8 +641,228 @@ int main(void)
         }
         
         // ====================================================
-        // PHASE 5: PASSWORD VERIFICATION FOR ACTION 'A'
+        // PHASE 4.5: RESET PASSWORD LOGIC (D)
         // ====================================================
+        if (state == STATE_RESET_PASS_VERIFY || 
+            state == STATE_RESET_CREATE_PASS || 
+            state == STATE_RESET_CONFIRM_PASS)
+        {
+            char* active_buffer; 
+
+            if (state == STATE_RESET_PASS_VERIFY) {
+                active_buffer = Confirmpass; // Verify old password
+            } else if (state == STATE_RESET_CREATE_PASS) {
+                active_buffer = new_pass;    // Enter new password
+            } else { // STATE_RESET_CONFIRM_PASS
+                active_buffer = Confirmpass; // Confirm new password
+            }
+
+            // A. Handle input characters ('0' to '9')
+            if(key >= '0' && key <= '9')
+            {
+                if(index < 5)
+                {
+                    active_buffer[index++] = key;
+                    LCD_Char(key);
+                }
+            }
+            // B. Handle '#' (Confirm)
+            else if(key == '#' && index == 5)
+            {
+                active_buffer[index] = '\0';
+                index = 0;
+                
+                // --- 1. VERIFY OLD PASSWORD (Reset) ---
+                if (state == STATE_RESET_PASS_VERIFY)
+                {
+                    if (strcmp(pass, Confirmpass) == 0) // Correct Old Password
+                    {
+                        attempts_D = 0;
+                        state = STATE_RESET_CREATE_PASS; 
+                        LCD_Clear();
+                        LCD_SetCursor(1, 0);
+                        LCD_String("Enter New Pwd:");
+                        LCD_SetCursor(2, 0);
+                    }
+                    else // Incorrect Old Password
+                    {
+                        attempts_D++;
+                        if (attempts_D >= 3) {
+                            lock_system = true;
+                            state = STATE_LOCKOUT;
+                            UART2_SendChar('L');
+                            LCD_Clear();
+                            LCD_String("3 Failed Attempts");
+                            LCD_SetCursor(2, 0);
+                            LCD_String("SYSTEM LOCKED!");
+                            delayMs(5000); 
+
+                            lock_system = false; // Reset lock after delay
+                            attempts_D = 0;
+                            state = STATE_MAIN_MENU;
+                            LCD_Clear();
+                            LCD_SetCursor(1, 0);
+                            LCD_String("Menu>A:Opn B:PWD");
+                            LCD_SetCursor(2, 0);
+                            LCD_String(" C:TMO  D:Reset");
+                        } else {
+                            LCD_Clear();
+                            LCD_String("Old PWD Incorrect");
+                            LCD_SetCursor(2, 0);
+                            LCD_String("Attempts Left: ");
+                            LCD_Char('3' - attempts_D); 
+                            delayMs(2000);
+                            
+                            index = 0;
+                            LCD_Clear();
+                            LCD_SetCursor(1, 0);
+                            LCD_String("Verify Old Pwd: ");
+                            LCD_SetCursor(2, 0);
+                            memset(Confirmpass, 0, sizeof(Confirmpass));
+                        }
+                    }
+                }
+                // --- 2. ENTER NEW PASSWORD (Reset) ---
+                else if (state == STATE_RESET_CREATE_PASS)
+                {
+                    state = STATE_RESET_CONFIRM_PASS; 
+                    LCD_Clear();
+                    LCD_SetCursor(1, 0);
+                    LCD_String("Confirm New Pwd: ");
+                    LCD_SetCursor(2, 0);
+                }
+                // --- 3. CONFIRM NEW PASSWORD (Reset) ---
+                else if (state == STATE_RESET_CONFIRM_PASS)
+                {
+                    if (strcmp(new_pass, Confirmpass) == 0) // New Password confirmed
+                    {
+                        strcpy(pass, new_pass);
+                        
+                        // Send the new password to Control ECU to update EEPROM
+                        LCD_Clear();
+                        LCD_String("Saving to EEPROM...");
+                        SendPasswordToControl(new_pass, "SETPWD");
+                        
+                        // Receive response from Control ECU
+                        char* save_response = ReceiveResponseFromControl();
+                        
+                        if(strcmp(save_response, "PWD_SAVED") == 0) // Password saved successfully
+                        {
+                            LCD_Clear();
+                            LCD_String("Password Reset!");
+                            LCD_SetCursor(2, 0);
+                            LCD_String("Saved to EEPROM");
+                            DIO_WritePin(PORTF, PIN3, HIGH);
+                            delayMs(1500);
+                            DIO_WritePin(PORTF, PIN3, LOW);
+                            
+                            // Now reset timeout to 10 seconds
+                            LCD_Clear();
+                            LCD_String("Resetting TMO...");
+                            
+                            // Authenticate with VERIFYPWD for timeout reset
+                            char verify_cmd[20];
+                            sprintf(verify_cmd, "VERIFYPWD:%s", new_pass);
+                            UART2_SendString(verify_cmd);
+                            UART2_SendChar('\n');
+                            delayMs(100);
+                            
+                            char* auth_response = ReceiveResponseFromControl();
+                            
+                            if(strcmp(auth_response, "AUTH_OK") == 0)
+                            {
+                                // Send timeout reset command
+                                char timeout_cmd[20];
+                                sprintf(timeout_cmd, "TIMEOUT:10");
+                                UART2_SendString(timeout_cmd);
+                                UART2_SendChar('\n');
+                                delayMs(100);
+                                
+                                char* timeout_response = ReceiveResponseFromControl();
+                                
+                                if(strcmp(timeout_response, "TIMEOUT_SAVED") == 0)
+                                {
+                                    auto_lock_timeout = 10; // Update local variable
+                                    LCD_Clear();
+                                    LCD_String("Complete!");
+                                    LCD_SetCursor(2, 0);
+                                    LCD_String("TMO Reset to 10s");
+                                    DIO_WritePin(PORTF, PIN3, HIGH);
+                                    delayMs(1500);
+                                    DIO_WritePin(PORTF, PIN3, LOW);
+                                }
+                                else
+                                {
+                                    LCD_Clear();
+                                    LCD_String("Warning: TMO");
+                                    LCD_SetCursor(2, 0);
+                                    LCD_String("reset failed");
+                                    delayMs(1500);
+                                }
+                            }
+                            else
+                            {
+                                LCD_Clear();
+                                LCD_String("Warning: TMO");
+                                LCD_SetCursor(2, 0);
+                                LCD_String("reset failed");
+                                delayMs(1500);
+                            }
+                        }
+                        else // Failed to save password
+                        {
+                            LCD_Clear();
+                            LCD_String("Error Saving PWD");
+                            LCD_SetCursor(2, 0);
+                            LCD_String("Please Retry");
+                            DIO_WritePin(PORTF, PIN1, HIGH);
+                            delayMs(2000);
+                            DIO_WritePin(PORTF, PIN1, LOW);
+                        }
+                        
+                        state = STATE_MAIN_MENU;
+                        LCD_Clear();
+                        LCD_SetCursor(1, 0);
+                        LCD_String("Menu>A:Opn B:PWD");
+                        LCD_SetCursor(2, 0);
+                        LCD_String(" C:TMO  D:Reset");
+                    }
+                    else // New Passwords Mismatch
+                    {
+                        LCD_Clear();
+                        LCD_String("Mismatch! Restart");
+                        delayMs(2000);
+                        
+                        index = 0;
+                        state = STATE_RESET_CREATE_PASS;
+                        LCD_Clear();
+                        LCD_SetCursor(1, 0);
+                        LCD_String("Enter New Pwd:");
+                        LCD_SetCursor(2, 0);
+                    }
+                }
+            }
+            // C. Handle '*' (Clear/Cancel)
+            else if(key == '*')
+            {
+                index = 0; 
+                LCD_Clear();
+                if (state == STATE_RESET_PASS_VERIFY) {
+                    LCD_SetCursor(1, 0); 
+                    LCD_String("Verify Old Pwd:"); 
+                    LCD_SetCursor(2, 0);
+                } else if (state == STATE_RESET_CREATE_PASS) {
+                    LCD_SetCursor(1, 0); 
+                    LCD_String("Enter New Pwd:"); 
+                    LCD_SetCursor(2, 0);
+                } else if (state == STATE_RESET_CONFIRM_PASS) {
+                    LCD_SetCursor(1, 0); 
+                    LCD_String("Confirm New Pwd:"); 
+                    LCD_SetCursor(2, 0);
+                }
+            }
+            continue; 
+        }
         if (state == STATE_VERIFY_PASS_A)
         {
             // A. Handle input characters ('0' to '9')
@@ -615,9 +912,9 @@ int main(void)
                     state = STATE_MAIN_MENU;
                     LCD_Clear();
                     LCD_SetCursor(1, 0);
-                    LCD_String("MainMenu> A:Open");
+                    LCD_String("Menu>A:Opn B:PWD");
                     LCD_SetCursor(2, 0);
-                    LCD_String("B:PWD C:TMO");
+                    LCD_String(" C:TMO  D:Reset");
                 }
                 else // Incorrect Password (DENY)
                 {
@@ -637,9 +934,9 @@ int main(void)
                         state = STATE_MAIN_MENU; 
                         LCD_Clear();
                         LCD_SetCursor(1, 0);
-                        LCD_String("MainMenu> A:Open");
+                        LCD_String("Menu>A:Opn B:PWD");
                         LCD_SetCursor(2, 0);
-                        LCD_String("B:PWD C:TMO");
+                        LCD_String(" C:TMO  D:Reset");
                     }
                     else 
                     {
@@ -730,9 +1027,9 @@ int main(void)
                             state = STATE_MAIN_MENU;
                             LCD_Clear();
                             LCD_SetCursor(1, 0);
-                            LCD_String("MainMenu> A:Open"); 
+                            LCD_String("Menu>A:Opn B:PWD"); 
                             LCD_SetCursor(2, 0);
-                            LCD_String("B:PWD C:TMO");      
+                            LCD_String(" C:TMO  D:Reset");      
                         } 
                         else if(strcmp(control_response, "TIMEOUT") == 0) {
                             // TIMEOUT: No response from Control ECU

@@ -36,11 +36,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state>Full formatting, without multibyte support.</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>Full formatting, without multibyte support.</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -48,7 +48,7 @@
                 </option>
                 <option>
                     <name>OGCoreOrChip</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>GRuntimeLibSelect</name>
@@ -62,7 +62,7 @@
                 </option>
                 <option>
                     <name>RTDescription</name>
-                    <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>OGProductVersion</name>
@@ -74,7 +74,7 @@
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
-                    <state>TM4C123GH6PM	TexasInstruments TM4C123GH6PM</state>
+                    <state>Default	None</state>
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
@@ -99,7 +99,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>29</version>
-                    <state>39</state>
+                    <state>38</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -116,21 +116,21 @@
                 <option>
                     <name>CoreVariant</name>
                     <version>29</version>
-                    <state>39</state>
+                    <state>38</state>
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>TM4C123GH6PM	TexasInstruments TM4C123GH6PM</state>
+                    <state>Default	None</state>
                 </option>
                 <option>
                     <name>FPU2</name>
                     <version>0</version>
-                    <state>4</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>NrRegs</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>NEON</name>
@@ -139,7 +139,7 @@
                 <option>
                     <name>GFPUCoreSlave2</name>
                     <version>29</version>
-                    <state>39</state>
+                    <state>38</state>
                 </option>
                 <option>
                     <name>OGCMSISPackSelectDevice</name>
@@ -180,7 +180,7 @@
                 </option>
                 <option>
                     <name>DSPExtension</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>TrustZone</name>
@@ -214,7 +214,7 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
-                    <state>PART_TM4C123GH6PM</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -335,9 +335,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>D:\Programs\ti</state>
-                    <state>D:\Programs\ti\inc</state>
-                    <state>D:\Programs\ti\driverlib</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -353,7 +351,7 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
@@ -362,7 +360,7 @@
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCPosIndRopi</name>
@@ -581,7 +579,7 @@
                 </option>
                 <option>
                     <name>AOutputFile</name>
-                    <state>$FILE_BNAME$.o</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>ALimitErrorsCheck</name>
@@ -635,7 +633,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>HMI.srec</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -653,7 +651,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>16</hasPrio>
+                <hasPrio>0</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -746,7 +744,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -794,7 +792,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state>D:\Programs\ti\driverlib\ewarm\Exe\driverlib.a</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -806,7 +804,7 @@
                 </option>
                 <option>
                     <name>IlinkProgramEntryLabel</name>
-                    <state>__iar_program_start</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>DoFill</name>
@@ -979,7 +977,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>HMI_import_lib.o</state>
+                    <state>###Unitialized###</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -2088,48 +2086,6 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\adc.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\adc.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\dio.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\dio.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\keypad.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\keypad.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\lcd.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\lcd.h</name>
-    </file>
-    <file>
         <name>$PROJ_DIR$\main.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\startup_ewarm.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\systick.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\systick.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\tm4c123gh6pm.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\uart.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\uart.h</name>
     </file>
 </project>

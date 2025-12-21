@@ -105873,6 +105873,510 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@300@macro@PASSWORD_MAX_LENGTH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PASSWORD_MAX_LENGTH",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "PASSWORD_MAX_LENGTH",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@336@macro@EEPROM_PASSWORD_BLOCK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_PASSWORD_BLOCK",
+    "location": {
+      "column": "9",
+      "line": "14",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "EEPROM_PASSWORD_BLOCK",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@371@macro@EEPROM_PASSWORD_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_PASSWORD_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "EEPROM_PASSWORD_OFFSET",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@406@macro@EEPROM_TIMEOUT_BLOCK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_TIMEOUT_BLOCK",
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "EEPROM_TIMEOUT_BLOCK",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@441@macro@EEPROM_TIMEOUT_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_TIMEOUT_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "EEPROM_TIMEOUT_OFFSET",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@System_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void System_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "System_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "23",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "UART2_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_ReadChar",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char UART2_ReadChar(void)",
+    "location": {
+      "column": "6",
+      "line": "24",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "UART2_ReadChar",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "UART2_SendString",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_Available",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int UART2_Available(void)",
+    "location": {
+      "column": "6",
+      "line": "26",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "UART2_Available",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Delay_ms",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Delay_ms(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "28",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "Delay_ms",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Delay_us",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Delay_us(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "29",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "Delay_us",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@stringToInt",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int stringToInt(const char *)",
+    "location": {
+      "column": "6",
+      "line": "30",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "stringToInt",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Servo_Update",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Servo_Update(int)",
+    "location": {
+      "column": "6",
+      "line": "31",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "Servo_Update",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@master_password",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "master_password",
+    "location": {
+      "column": "6",
+      "line": "34",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "master_password",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@auto_lock_timeout",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "auto_lock_timeout",
+    "location": {
+      "column": "10",
+      "line": "35",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "auto_lock_timeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@servo_open",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "servo_open",
+    "location": {
+      "column": "5",
+      "line": "36",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "servo_open",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@authenticated",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "authenticated",
+    "location": {
+      "column": "5",
+      "line": "37",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "authenticated",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int main(void)",
+    "location": {
+      "column": "5",
+      "line": "39",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1820@F@main@read_buffer",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "read_buffer",
+    "location": {
+      "column": "13",
+      "line": "60",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "read_buffer",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@2642@F@main@rx_buffer",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "rx_buffer",
+    "location": {
+      "column": "10",
+      "line": "80",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "rx_buffer",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@2667@F@main@rx_index",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "rx_index",
+    "location": {
+      "column": "9",
+      "line": "81",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "rx_index",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@2835@F@main@c",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "c",
+    "location": {
+      "column": "22",
+      "line": "88",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "c",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@3729@F@main@new_pass",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "new_pass",
+    "location": {
+      "column": "27",
+      "line": "113",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "new_pass",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@7966@F@main@c",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "c",
+    "location": {
+      "column": "39",
+      "line": "193",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "c",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@System_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void System_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "242",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "System_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Delay_ms",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Delay_ms(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "263",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "Delay_ms",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@11126@F@Delay_ms@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "23",
+      "line": "264",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@11126@F@Delay_ms@j",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "j",
+    "location": {
+      "column": "26",
+      "line": "264",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "j",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Delay_us",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Delay_us(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "284",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "Delay_us",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@11687@F@Delay_us@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "23",
+      "line": "285",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@11687@F@Delay_us@j",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "j",
+    "location": {
+      "column": "26",
+      "line": "285",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "j",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@stringToInt",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int stringToInt(const char *)",
+    "location": {
+      "column": "5",
+      "line": "290",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "stringToInt",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@11819@F@stringToInt@res",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "res",
+    "location": {
+      "column": "9",
+      "line": "291",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "res",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Servo_Update",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Servo_Update(int)",
+    "location": {
+      "column": "6",
+      "line": "299",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "Servo_Update",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@delayMs",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void delayMs(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "315",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
+    },
+    "name": "delayMs",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:stdio.h@99@macro@_STDIO",
     "What": "MacroDef",
     "defdec": "Def",
@@ -106303,902 +106807,6 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdio.h"
     },
     "name": "rename",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@300@macro@PASSWORD_MAX_LENGTH",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PASSWORD_MAX_LENGTH",
-    "location": {
-      "column": "9",
-      "line": "13",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "PASSWORD_MAX_LENGTH",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@336@macro@EEPROM_PASSWORD_BLOCK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "EEPROM_PASSWORD_BLOCK",
-    "location": {
-      "column": "9",
-      "line": "14",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "EEPROM_PASSWORD_BLOCK",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@371@macro@EEPROM_PASSWORD_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "EEPROM_PASSWORD_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "15",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "EEPROM_PASSWORD_OFFSET",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@406@macro@EEPROM_TIMEOUT_BLOCK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "EEPROM_TIMEOUT_BLOCK",
-    "location": {
-      "column": "9",
-      "line": "16",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "EEPROM_TIMEOUT_BLOCK",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@441@macro@EEPROM_TIMEOUT_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "EEPROM_TIMEOUT_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "17",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "EEPROM_TIMEOUT_OFFSET",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@System_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void System_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "System_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART2_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "23",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "UART2_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_ReadChar",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char UART2_ReadChar(void)",
-    "location": {
-      "column": "6",
-      "line": "24",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "UART2_ReadChar",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_SendString",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART2_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "25",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "UART2_SendString",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_Available",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int UART2_Available(void)",
-    "location": {
-      "column": "6",
-      "line": "26",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "UART2_Available",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Delay_ms",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Delay_ms(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "28",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "Delay_ms",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Delay_us",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Delay_us(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "29",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "Delay_us",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@stringToInt",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int stringToInt(const char *)",
-    "location": {
-      "column": "6",
-      "line": "30",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "stringToInt",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Servo_Update",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Servo_Update(int)",
-    "location": {
-      "column": "6",
-      "line": "31",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "Servo_Update",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@master_password",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "master_password",
-    "location": {
-      "column": "6",
-      "line": "34",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "master_password",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@auto_lock_timeout",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "auto_lock_timeout",
-    "location": {
-      "column": "10",
-      "line": "35",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "auto_lock_timeout",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@servo_open",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "servo_open",
-    "location": {
-      "column": "5",
-      "line": "36",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "servo_open",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "int main(void)",
-    "location": {
-      "column": "5",
-      "line": "38",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "main",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@1731@F@main@read_buffer",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "read_buffer",
-    "location": {
-      "column": "13",
-      "line": "59",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "read_buffer",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@2553@F@main@rx_buffer",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "rx_buffer",
-    "location": {
-      "column": "10",
-      "line": "79",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "rx_buffer",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@2578@F@main@rx_index",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "rx_index",
-    "location": {
-      "column": "9",
-      "line": "80",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "rx_index",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@2746@F@main@c",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "c",
-    "location": {
-      "column": "22",
-      "line": "87",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "c",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@3640@F@main@new_pass",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "new_pass",
-    "location": {
-      "column": "27",
-      "line": "112",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "new_pass",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@6642@F@main@c",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "c",
-    "location": {
-      "column": "39",
-      "line": "170",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "c",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@System_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void System_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "217",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "System_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Delay_ms",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Delay_ms(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "238",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "Delay_ms",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@9591@F@Delay_ms@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "23",
-      "line": "239",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@9591@F@Delay_ms@j",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "j",
-    "location": {
-      "column": "26",
-      "line": "239",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "j",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Delay_us",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Delay_us(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "259",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "Delay_us",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@10152@F@Delay_us@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "23",
-      "line": "260",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@10152@F@Delay_us@j",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "j",
-    "location": {
-      "column": "26",
-      "line": "260",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "j",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@stringToInt",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "int stringToInt(const char *)",
-    "location": {
-      "column": "5",
-      "line": "265",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "stringToInt",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@10284@F@stringToInt@res",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "res",
-    "location": {
-      "column": "9",
-      "line": "266",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "res",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Servo_Update",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Servo_Update(int)",
-    "location": {
-      "column": "6",
-      "line": "274",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "Servo_Update",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@delayMs",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void delayMs(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "290",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\main.c"
-    },
-    "name": "delayMs",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:string.h@100@macro@_STRING",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STRING",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "_STRING",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:string.h@344@macro@NULL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "NULL",
-    "location": {
-      "column": "11",
-      "line": "20",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "NULL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memcmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int memcmp(const void *, const void *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "38",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memcmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memcpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memcpy(void *restrict, const void *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "40",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memcpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memmove",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memmove(void *, const void *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "43",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memmove",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memset",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memset(void *, int, size_t)",
-    "location": {
-      "column": "45",
-      "line": "45",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memset",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcat",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strcat(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "46",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcat",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcmp(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "48",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcoll",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcoll(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "49",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcoll",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strcpy(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "50",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcspn",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strcspn(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "52",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcspn",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strerror",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strerror(int)",
-    "location": {
-      "column": "45",
-      "line": "53",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strerror",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strlen",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strlen(const char *)",
-    "location": {
-      "column": "45",
-      "line": "54",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strlen",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncat",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strncat(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "55",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncat",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strncmp(const char *, const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "58",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strncpy(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "60",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strspn",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strspn(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "63",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strspn",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strtok",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strtok(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "64",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strtok",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strxfrm",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strxfrm(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "66",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strxfrm",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strdup",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strdup(const char *)",
-    "location": {
-      "column": "45",
-      "line": "70",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strdup",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcasecmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcasecmp(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "71",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcasecmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncasecmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strncasecmp(const char *, const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "73",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncasecmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strtok_r",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strtok_r(char *, const char *, char **)",
-    "location": {
-      "column": "45",
-      "line": "75",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strtok_r",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strnlen",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strnlen(const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "77",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strnlen",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memchr(const void *, int, size_t)",
-    "location": {
-      "column": "37",
-      "line": "171",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strchr(const char *, int)",
-    "location": {
-      "column": "37",
-      "line": "172",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strpbrk",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strpbrk(const char *, const char *)",
-    "location": {
-      "column": "37",
-      "line": "173",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strpbrk",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strrchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strrchr(const char *, int)",
-    "location": {
-      "column": "37",
-      "line": "174",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strrchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strstr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strstr(const char *, const char *)",
-    "location": {
-      "column": "37",
-      "line": "175",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strstr",
     "origin": "system_include",
     "scope": null
   },
@@ -117213,86 +116821,408 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "ID": "c:string.h@100@macro@_STRING",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_YSIZET_H",
+    "display": "_STRING",
     "location": {
       "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "line": "4",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
     },
-    "name": "_YSIZET_H",
+    "name": "_STRING",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "ID": "c:string.h@344@macro@NULL",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_SIZE_T",
+    "display": "NULL",
     "location": {
       "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "line": "20",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
     },
-    "name": "_SIZE_T",
+    "name": "NULL",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
+    "ID": "c:@F@memcmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int memcmp(const void *, const void *, size_t)",
     "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "column": "45",
+      "line": "38",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
     },
-    "name": "_STD_USING_SIZE_T",
+    "name": "memcmp",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
+    "ID": "c:@F@memcpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memcpy(void *restrict, const void *restrict, size_t)",
     "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "column": "45",
+      "line": "40",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
     },
-    "name": "size_t",
+    "name": "memcpy",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
+    "ID": "c:@F@memmove",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memmove(void *, const void *, size_t)",
     "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "column": "45",
+      "line": "43",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
     },
-    "name": "__DATA_PTR_MEM_HELPER1__",
+    "name": "memmove",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
+    "ID": "c:@F@memset",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memset(void *, int, size_t)",
     "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "column": "45",
+      "line": "45",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
     },
-    "name": "__data_size_t",
+    "name": "memset",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcat",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strcat(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "46",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcat",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcmp(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "48",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcoll",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcoll(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "49",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcoll",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strcpy(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "50",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcpy",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcspn",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strcspn(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "52",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcspn",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strerror",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strerror(int)",
+    "location": {
+      "column": "45",
+      "line": "53",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strerror",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strlen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strlen(const char *)",
+    "location": {
+      "column": "45",
+      "line": "54",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strlen",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncat",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strncat(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "55",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncat",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strncmp(const char *, const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "58",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strncpy(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "60",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncpy",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strspn",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strspn(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "63",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strspn",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtok",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strtok(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "64",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strtok",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strxfrm",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strxfrm(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "66",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strxfrm",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strdup",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strdup(const char *)",
+    "location": {
+      "column": "45",
+      "line": "70",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strdup",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcasecmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcasecmp(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "71",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcasecmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncasecmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strncasecmp(const char *, const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "73",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncasecmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtok_r",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strtok_r(char *, const char *, char **)",
+    "location": {
+      "column": "45",
+      "line": "75",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strtok_r",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strnlen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strnlen(const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "77",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strnlen",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memchr(const void *, int, size_t)",
+    "location": {
+      "column": "37",
+      "line": "171",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strchr(const char *, int)",
+    "location": {
+      "column": "37",
+      "line": "172",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strpbrk",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strpbrk(const char *, const char *)",
+    "location": {
+      "column": "37",
+      "line": "173",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strpbrk",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strrchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strrchr(const char *, int)",
+    "location": {
+      "column": "37",
+      "line": "174",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strrchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strstr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strstr(const char *, const char *)",
+    "location": {
+      "column": "37",
+      "line": "175",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strstr",
     "origin": "system_include",
     "scope": null
   },
@@ -117747,6 +117677,90 @@
     "scope": null
   },
   {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:systick.h@26@macro@SYSTICK_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -117869,104 +117883,6 @@
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\systick.h"
     },
     "name": "delayUs",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Servo.h@27@macro@SERVO_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SERVO_H",
-    "location": {
-      "column": "9",
-      "line": "3",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
-    },
-    "name": "SERVO_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Servo.h@155@macro@SERVO_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SERVO_PORT",
-    "location": {
-      "column": "9",
-      "line": "17",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
-    },
-    "name": "SERVO_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Servo.h@185@macro@SERVO_PIN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SERVO_PIN",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
-    },
-    "name": "SERVO_PIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Servo_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Servo_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "25",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
-    },
-    "name": "Servo_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Servo_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Servo_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "25",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
-    },
-    "name": "Servo_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Servo_SetAngle",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Servo_SetAngle(int)",
-    "location": {
-      "column": "6",
-      "line": "27",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
-    },
-    "name": "Servo_SetAngle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Servo_SetAngle",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Servo_SetAngle(int)",
-    "location": {
-      "column": "6",
-      "line": "27",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
-    },
-    "name": "Servo_SetAngle",
     "origin": "user_include",
     "scope": null
   },
@@ -118121,6 +118037,104 @@
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\uart.h"
     },
     "name": "UART2_ReceiveCharTimeout",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Servo.h@27@macro@SERVO_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SERVO_H",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
+    },
+    "name": "SERVO_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Servo.h@155@macro@SERVO_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SERVO_PORT",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
+    },
+    "name": "SERVO_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Servo.h@185@macro@SERVO_PIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SERVO_PIN",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
+    },
+    "name": "SERVO_PIN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Servo_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Servo_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
+    },
+    "name": "Servo_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Servo_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Servo_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
+    },
+    "name": "Servo_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Servo_SetAngle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Servo_SetAngle(int)",
+    "location": {
+      "column": "6",
+      "line": "27",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
+    },
+    "name": "Servo_SetAngle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Servo_SetAngle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Servo_SetAngle(int)",
+    "location": {
+      "column": "6",
+      "line": "27",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\Control\\Servo.h"
+    },
+    "name": "Servo_SetAngle",
     "origin": "user_include",
     "scope": null
   },
