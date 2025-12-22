@@ -346,7 +346,7 @@ Edit `Control/uart.c` and `HMI/uart.c`:
 - Check EEPROM address configuration
 - Test EEPROM read/write operations in debug mode
 
----
+--
 
 ## 📝 Development Notes
 
