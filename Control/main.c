@@ -30,7 +30,9 @@
 #define SERVO_PULSE_90DEG       1500U
 #define SERVO_PULSE_0DEG        1000U
 #define SERVO_PERIOD_HIGH_90    18500U
-#define SERVO_PERIOD_HIGH_0     19000U
+#define SERVO_PERIOD_HIGH_0     19000U  
+
+extern void Run_Unit_Tests(void);
 
 /* --- FUNCTION PROTOTYPES --- */
 void System_Init(void);
@@ -99,6 +101,8 @@ int main(void)
     /* UART Buffer with proper sized constant (VIOLATION FIX #3) */
     char rx_buffer[RX_BUFFER_SIZE];
     int rx_index = 0;
+
+    Run_Unit_Tests();
 
     while(1)
         {

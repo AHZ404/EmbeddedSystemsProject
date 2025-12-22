@@ -99,7 +99,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>29</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -635,7 +635,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>Control.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -643,7 +643,7 @@
                 </option>
                 <option>
                     <name>OOCObjCopyEnable</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
             </data>
         </settings>
@@ -653,7 +653,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>0</hasPrio>
+                <hasPrio>176</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -674,7 +674,7 @@
                 <debug>1</debug>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>$PROJ_FNAME$.out</state>
+                    <state>$PROJ_FNAME$.axf</state>
                 </option>
                 <option>
                     <name>IlinkLibIOConfig</name>
@@ -2122,6 +2122,9 @@
     </file>
     <file>
         <name>$PROJ_DIR$\systick.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\test_unit.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\tm4c123gh6pm.h</name>

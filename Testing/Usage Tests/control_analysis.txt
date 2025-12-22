@@ -1,0 +1,37 @@
+﻿=== CONTROL PROJECT RESOURCE ANALYSIS ===
+Generated: 12/21/2025 21:04:49
+File: CONTROL.axf
+
+=== RAW OUTPUT ===
+   text	   data	    bss	    dec	    hex	filename    
+4704	      0	    540	   5244	   147c	CONTROL.axf
+
+=== ANALYSIS RESULTS ===
+Based on output: text=4704, data=0, bss=540
+
+Flash Memory:
+  Code (.text):    4704 bytes
+  Data (.data):    0 bytes
+  Total Flash:     4704 bytes (1.79% of 256KB)
+
+RAM Memory:
+  BSS (.bss):      540 bytes
+  Total RAM:       540 bytes (1.65% of 32KB)
+
+=== TM4C123GH6PM MEMORY ===
+Flash Available: 262,144 bytes (256 KB)
+Flash Used:      4704 bytes (1.79%)
+RAM Available:   32,768 bytes (32 KB)
+RAM Used:        540 bytes (1.65%)
+
+=== UART COMPONENTS (from your code) ===
+• master_password[20]: 20 bytes
+• rx_buffer[50]: 50 bytes  
+• read_buffer[20]: 20 bytes
+• Total UART buffers: ~90 bytes
+
+=== RECOMMENDATIONS ===
+- Excellent memory utilization!
+- Plenty of room for additional features
+- Can increase UART buffer sizes if needed
+- Consider adding error logging/debug features

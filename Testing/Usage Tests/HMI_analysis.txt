@@ -1,0 +1,48 @@
+﻿=== HMI - COMPLETE ANALYSIS ===
+Generated: 12/21/2025 21:22:27
+
+=== PROJECT COMPARISON ===
+
+Project  Code Data BSS Flash RAM
+-------  ---- ---- --- ----- ---
+HMI     16524    0 536 16524 536
+CONTROL  4704    0 540  4704 540
+
+
+
+
+=== MEMORY UTILIZATION PER TM4C ===
+HMI Flash: 16524 bytes (6.3% of 256KB)
+HMI RAM:   536 bytes (1.64% of 32KB)
+
+CONTROL Flash: 4704 bytes (1.79% of 256KB)
+CONTROL RAM:   540 bytes (1.65% of 32KB)
+
+=== SYSTEM TOTALS (Average per board) ===
+Average Flash per TM4C: 10614 bytes
+Average RAM per TM4C:   538 bytes
+
+=== UART BUFFER ANALYSIS ===
+From HMI.c:
+  • Password buffers: ~18 bytes (pass[6], Confirmpass[6], new_pass[6])
+  • Communication buffers: ~40 bytes (response[20], startup_check[20])
+  • Total HMI UART: ~58 bytes
+
+From CONTROL.c:
+  • Password buffer: 20 bytes (master_password[20])
+  • UART buffers: 70 bytes (rx_buffer[50], read_buffer[20])
+  • Total CONTROL UART: ~90 bytes
+
+Total UART buffers in system: ~148 bytes
+
+=== PERFORMANCE ASSESSMENT ===
+Both projects are highly memory efficient
+UART buffers are appropriately sized
+Plenty of headroom for additional features
+Well-suited for TM4C123GH6PM hardware
+
+=== RECOMMENDATIONS ===
+1. Both projects can run simultaneously without memory issues
+2. UART buffer sizes are adequate for 5-digit password communication
+3. Consider adding error counters or logging features
+4. System has capacity for additional security features

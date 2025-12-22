@@ -653,7 +653,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>16</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -674,7 +674,7 @@
                 <debug>1</debug>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>$PROJ_FNAME$.out</state>
+                    <state>$PROJ_FNAME$.axf</state>
                 </option>
                 <option>
                     <name>IlinkLibIOConfig</name>
@@ -2122,6 +2122,9 @@
     </file>
     <file>
         <name>$PROJ_DIR$\systick.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\test_integration.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\tm4c123gh6pm.h</name>

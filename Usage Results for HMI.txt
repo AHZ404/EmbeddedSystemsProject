@@ -1,0 +1,74 @@
+PS D:\University\7th Semester Senior 1\Introduction to Enbedded Systems\Project\adeem\HMI\Debug\Exe> # Clear any errors first
+>> $Error.Clear()
+>>
+>> # Set ARM path
+>> $armPath = "C:\Program Files\Arm\GNU Toolchain mingw-w64-x86_64-arm-none-eabi\bin"
+>> $env:Path += ";$armPath"
+>>
+>> # Navigate to project
+>> cd "D:\University\7th Semester Senior 1\Introduction to Enbedded Systems\Project\adeem\HMI\Debug\Exe"
+>>
+>> Write-Host "=== HMI Analysis ===" -ForegroundColor Cyan
+>>
+>> # Get the size output
+>> $result = arm-none-eabi-size -B HMI.axf
+>> Write-Host $result
+>>
+>> # Parse the output correctly
+>> if ($result -is [string]) {
+>>     # Split into lines and get the second line (first line is header)
+>>     $lines = $result -split "`n"
+>>     if ($lines.Count -ge 2) {
+>>         $dataLine = $lines[1].Trim()  # Get the data line
+>>
+>>         # Split by whitespace
+>>         $values = $dataLine -split '\s+'
+>>
+>>         if ($values.Count -ge 3) {
+>>             $text = [int]$values[0]
+>>             $data = [int]$values[1]
+>>             $bss = [int]$values[2]
+>>
+>>             Write-Host "`n=== ANALYSIS RESULTS ===" -ForegroundColor Green
+>>             Write-Host "Code (.text): $text bytes" -ForegroundColor White
+>>             Write-Host "Data (.data): $data bytes" -ForegroundColor White
+>>             Write-Host "BSS (.bss):   $bss bytes" -ForegroundColor White
+>>
+>>             $flashUsed = $text + $data
+>>             $ramUsed = $data + $bss
+>>
+>>             Write-Host "`nFlash Used (Code+Data): $flashUsed bytes" -ForegroundColor Cyan
+>>             Write-Host "RAM Used (Data+BSS): $ramUsed bytes" -ForegroundColor Cyan
+>>
+>>             # TM4C Limits
+>>             $flashTotal = 262144  # 256KB
+>>             $ramTotal = 32768     # 32KB
+>>
+>>             Write-Host "`n=== TM4C123GH6PM LIMITS ===" -ForegroundColor Yellow
+>>             Write-Host "Flash Available: $flashTotal bytes (256 KB)" -ForegroundColor Gray
+>>             Write-Host "RAM Available:   $ramTotal bytes (32 KB)" -ForegroundColor Gray
+>>
+>>             $flashPercent = [math]::Round(($flashUsed / $flashTotal) * 100, 2)
+>>             $ramPercent = [math]::Round(($ramUsed / $ramTotal) * 100, 2)
+>>
+>>             Write-Host "`n=== UTILIZATION ===" -ForegroundColor Magenta
+>>             Write-Host "Flash: $flashPercent% used" -ForegroundColor White
+>>             Write-Host "RAM:   $ramPercent% used" -ForegroundColor White
+>>
+>>             # Recommendations
+>>             Write-Host "`n=== RECOMMENDATIONS ===" -ForegroundColor Green
+>>             if ($flashPercent -lt 10) {
+>>                 Write-Host "✅ Flash usage is excellent (<10%)" -ForegroundColor Green
+>>             } elseif ($flashPercent -lt 50) {
+>>                 Write-Host "✓ Flash usage is good" -ForegroundColor Green
+>>             }
+>>
+>>             if ($ramPercent -lt 5) {
+>>                 Write-Host "✅ RAM usage is very low (<5%)" -ForegroundColor Green
+>>                 Write-Host "   You can increase UART buffer sizes" -ForegroundColor Gray
+>>             }
+>>         }
+>>     }
+>> }
+=== HMI Analysis ===
+   text    data     bss     dec     hex filename   16524              0     536   17060    42a4 HMI.axf

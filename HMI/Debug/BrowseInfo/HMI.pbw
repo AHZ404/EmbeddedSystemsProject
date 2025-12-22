@@ -96983,13 +96983,27 @@
     "scope": null
   },
   {
+    "ID": "c:@F@Run_Integration_Tests",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Run_Integration_Tests(void)",
+    "location": {
+      "column": "13",
+      "line": "11",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
+    },
+    "name": "Run_Integration_Tests",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@delayMs",
     "What": "Function",
     "defdec": "Dec",
     "display": "void delayMs(int)",
     "location": {
       "column": "6",
-      "line": "12",
+      "line": "14",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "delayMs",
@@ -97003,7 +97017,7 @@
     "display": "void SendPasswordToControl(char *, char *)",
     "location": {
       "column": "6",
-      "line": "15",
+      "line": "17",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "SendPasswordToControl",
@@ -97017,7 +97031,7 @@
     "display": "char * ReceiveResponseFromControl(void)",
     "location": {
       "column": "7",
-      "line": "29",
+      "line": "31",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "ReceiveResponseFromControl",
@@ -97025,13 +97039,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@978@F@ReceiveResponseFromControl@response",
+    "ID": "c:main.c@1022@F@ReceiveResponseFromControl@response",
     "What": "Variable",
     "defdec": "Def",
     "display": "response",
     "location": {
       "column": "17",
-      "line": "31",
+      "line": "33",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "response",
@@ -97039,13 +97053,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1009@F@ReceiveResponseFromControl@buffer_index",
+    "ID": "c:main.c@1053@F@ReceiveResponseFromControl@buffer_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "buffer_index",
     "location": {
       "column": "9",
-      "line": "32",
+      "line": "34",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "buffer_index",
@@ -97053,13 +97067,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1036@F@ReceiveResponseFromControl@received_char",
+    "ID": "c:main.c@1080@F@ReceiveResponseFromControl@received_char",
     "What": "Variable",
     "defdec": "Def",
     "display": "received_char",
     "location": {
       "column": "10",
-      "line": "33",
+      "line": "35",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "received_char",
@@ -97067,13 +97081,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1061@F@ReceiveResponseFromControl@timeout_count",
+    "ID": "c:main.c@1105@F@ReceiveResponseFromControl@timeout_count",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_count",
     "location": {
       "column": "9",
-      "line": "34",
+      "line": "36",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "timeout_count",
@@ -97081,13 +97095,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1089@F@ReceiveResponseFromControl@max_timeout",
+    "ID": "c:main.c@1133@F@ReceiveResponseFromControl@max_timeout",
     "What": "Variable",
     "defdec": "Def",
     "display": "max_timeout",
     "location": {
       "column": "9",
-      "line": "35",
+      "line": "37",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "max_timeout",
@@ -97107,7 +97121,7 @@
         "display": "STATE_CREATE_PASS",
         "location": {
           "column": "5",
-          "line": "68",
+          "line": "70",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_CREATE_PASS",
@@ -97121,7 +97135,7 @@
         "display": "STATE_CONFIRM_PASS",
         "location": {
           "column": "5",
-          "line": "69",
+          "line": "71",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_CONFIRM_PASS",
@@ -97135,7 +97149,7 @@
         "display": "STATE_MAIN_MENU",
         "location": {
           "column": "5",
-          "line": "70",
+          "line": "72",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_MAIN_MENU",
@@ -97149,7 +97163,7 @@
         "display": "STATE_VERIFY_PASS_A",
         "location": {
           "column": "5",
-          "line": "71",
+          "line": "73",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_VERIFY_PASS_A",
@@ -97163,7 +97177,7 @@
         "display": "STATE_LOCKOUT",
         "location": {
           "column": "5",
-          "line": "72",
+          "line": "74",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_LOCKOUT",
@@ -97177,7 +97191,7 @@
         "display": "STATE_CHANGE_PASS_VERIFY",
         "location": {
           "column": "5",
-          "line": "74",
+          "line": "76",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_CHANGE_PASS_VERIFY",
@@ -97191,7 +97205,7 @@
         "display": "STATE_CHANGE_PASS_NEW",
         "location": {
           "column": "5",
-          "line": "75",
+          "line": "77",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_CHANGE_PASS_NEW",
@@ -97205,7 +97219,7 @@
         "display": "STATE_CHANGE_PASS_CONFIRM",
         "location": {
           "column": "5",
-          "line": "76",
+          "line": "78",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_CHANGE_PASS_CONFIRM",
@@ -97219,7 +97233,7 @@
         "display": "STATE_ADJUST_TIMEOUT",
         "location": {
           "column": "5",
-          "line": "78",
+          "line": "80",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_ADJUST_TIMEOUT",
@@ -97233,7 +97247,7 @@
         "display": "STATE_VERIFY_PASS_C",
         "location": {
           "column": "5",
-          "line": "79",
+          "line": "81",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_VERIFY_PASS_C",
@@ -97247,7 +97261,7 @@
         "display": "STATE_RESET_PASS_VERIFY",
         "location": {
           "column": "5",
-          "line": "81",
+          "line": "83",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_RESET_PASS_VERIFY",
@@ -97261,7 +97275,7 @@
         "display": "STATE_RESET_CREATE_PASS",
         "location": {
           "column": "5",
-          "line": "82",
+          "line": "84",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_RESET_CREATE_PASS",
@@ -97275,7 +97289,7 @@
         "display": "STATE_RESET_CONFIRM_PASS",
         "location": {
           "column": "5",
-          "line": "83",
+          "line": "85",
           "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
         },
         "name": "STATE_RESET_CONFIRM_PASS",
@@ -97285,7 +97299,7 @@
     ],
     "location": {
       "column": "9",
-      "line": "67",
+      "line": "69",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "",
@@ -97299,7 +97313,7 @@
     "display": "enum PasswordState",
     "location": {
       "column": "3",
-      "line": "84",
+      "line": "86",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "PasswordState",
@@ -97313,7 +97327,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "86",
+      "line": "88",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "main",
@@ -97321,13 +97335,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3802@F@main@startup_check",
+    "ID": "c:main.c@3846@F@main@startup_check",
     "What": "Variable",
     "defdec": "Def",
     "display": "startup_check",
     "location": {
       "column": "10",
-      "line": "103",
+      "line": "105",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "startup_check",
@@ -97335,13 +97349,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3836@F@main@check_index",
+    "ID": "c:main.c@3880@F@main@check_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "check_index",
     "location": {
       "column": "9",
-      "line": "104",
+      "line": "106",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "check_index",
@@ -97349,13 +97363,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3862@F@main@startup_timeout",
+    "ID": "c:main.c@3906@F@main@startup_timeout",
     "What": "Variable",
     "defdec": "Def",
     "display": "startup_timeout",
     "location": {
       "column": "9",
-      "line": "105",
+      "line": "107",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "startup_timeout",
@@ -97363,13 +97377,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3982@F@main@received_char",
+    "ID": "c:main.c@4026@F@main@received_char",
     "What": "Variable",
     "defdec": "Def",
     "display": "received_char",
     "location": {
       "column": "14",
-      "line": "109",
+      "line": "111",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "received_char",
@@ -97377,13 +97391,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4810@F@main@state",
+    "ID": "c:main.c@4884@F@main@state",
     "What": "Variable",
     "defdec": "Def",
     "display": "state",
     "location": {
       "column": "19",
-      "line": "136",
+      "line": "139",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "state",
@@ -97391,13 +97405,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4856@F@main@pass",
+    "ID": "c:main.c@4930@F@main@pass",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass",
     "location": {
       "column": "10",
-      "line": "137",
+      "line": "140",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "pass",
@@ -97405,13 +97419,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4941@F@main@Confirmpass",
+    "ID": "c:main.c@5015@F@main@Confirmpass",
     "What": "Variable",
     "defdec": "Def",
     "display": "Confirmpass",
     "location": {
       "column": "10",
-      "line": "138",
+      "line": "141",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "Confirmpass",
@@ -97419,13 +97433,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5038@F@main@index",
+    "ID": "c:main.c@5112@F@main@index",
     "What": "Variable",
     "defdec": "Def",
     "display": "index",
     "location": {
       "column": "9",
-      "line": "139",
+      "line": "142",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "index",
@@ -97433,13 +97447,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5103@F@main@attempts_A",
+    "ID": "c:main.c@5177@F@main@attempts_A",
     "What": "Variable",
     "defdec": "Def",
     "display": "attempts_A",
     "location": {
       "column": "9",
-      "line": "142",
+      "line": "145",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "attempts_A",
@@ -97447,13 +97461,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5177@F@main@lock_system",
+    "ID": "c:main.c@5251@F@main@lock_system",
     "What": "Variable",
     "defdec": "Def",
     "display": "lock_system",
     "location": {
       "column": "10",
-      "line": "143",
+      "line": "146",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "lock_system",
@@ -97461,13 +97475,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5303@F@main@attempts_B",
+    "ID": "c:main.c@5377@F@main@attempts_B",
     "What": "Variable",
     "defdec": "Def",
     "display": "attempts_B",
     "location": {
       "column": "9",
-      "line": "146",
+      "line": "149",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "attempts_B",
@@ -97475,13 +97489,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5377@F@main@new_pass",
+    "ID": "c:main.c@5451@F@main@new_pass",
     "What": "Variable",
     "defdec": "Def",
     "display": "new_pass",
     "location": {
       "column": "10",
-      "line": "147",
+      "line": "150",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "new_pass",
@@ -97489,13 +97503,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5489@F@main@auto_lock_timeout",
+    "ID": "c:main.c@5563@F@main@auto_lock_timeout",
     "What": "Variable",
     "defdec": "Def",
     "display": "auto_lock_timeout",
     "location": {
       "column": "9",
-      "line": "150",
+      "line": "153",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "auto_lock_timeout",
@@ -97503,13 +97517,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5570@F@main@pot_value",
+    "ID": "c:main.c@5644@F@main@pot_value",
     "What": "Variable",
     "defdec": "Def",
     "display": "pot_value",
     "location": {
       "column": "9",
-      "line": "151",
+      "line": "154",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "pot_value",
@@ -97517,13 +97531,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5657@F@main@adjusted_timeout",
+    "ID": "c:main.c@5731@F@main@adjusted_timeout",
     "What": "Variable",
     "defdec": "Def",
     "display": "adjusted_timeout",
     "location": {
       "column": "9",
-      "line": "152",
+      "line": "155",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "adjusted_timeout",
@@ -97531,13 +97545,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5775@F@main@attempts_C",
+    "ID": "c:main.c@5849@F@main@attempts_C",
     "What": "Variable",
     "defdec": "Def",
     "display": "attempts_C",
     "location": {
       "column": "9",
-      "line": "153",
+      "line": "156",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "attempts_C",
@@ -97545,13 +97559,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5909@F@main@attempts_D",
+    "ID": "c:main.c@5983@F@main@attempts_D",
     "What": "Variable",
     "defdec": "Def",
     "display": "attempts_D",
     "location": {
       "column": "9",
-      "line": "156",
+      "line": "159",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "attempts_D",
@@ -97559,13 +97573,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6091@F@main@received_password",
+    "ID": "c:main.c@6165@F@main@received_password",
     "What": "Variable",
     "defdec": "Def",
     "display": "received_password",
     "location": {
       "column": "10",
-      "line": "159",
+      "line": "162",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "received_password",
@@ -97573,13 +97587,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6173@F@main@password_received",
+    "ID": "c:main.c@6247@F@main@password_received",
     "What": "Variable",
     "defdec": "Def",
     "display": "password_received",
     "location": {
       "column": "10",
-      "line": "160",
+      "line": "163",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "password_received",
@@ -97587,13 +97601,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6257@F@main@password_matches",
+    "ID": "c:main.c@6331@F@main@password_matches",
     "What": "Variable",
     "defdec": "Def",
     "display": "password_matches",
     "location": {
       "column": "10",
-      "line": "161",
+      "line": "164",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "password_matches",
@@ -97601,13 +97615,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6341@F@main@password_created",
+    "ID": "c:main.c@6415@F@main@password_created",
     "What": "Variable",
     "defdec": "Def",
     "display": "password_created",
     "location": {
       "column": "10",
-      "line": "162",
+      "line": "165",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "password_created",
@@ -97615,13 +97629,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6568@F@main@key",
+    "ID": "c:main.c@6642@F@main@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "14",
-      "line": "170",
+      "line": "173",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "key",
@@ -97629,13 +97643,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@10818@F@main@raw_timeout",
+    "ID": "c:main.c@10892@F@main@raw_timeout",
     "What": "Variable",
     "defdec": "Def",
     "display": "raw_timeout",
     "location": {
       "column": "17",
-      "line": "280",
+      "line": "283",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "raw_timeout",
@@ -97643,13 +97657,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@11359@F@main@timeout_str",
+    "ID": "c:main.c@11433@F@main@timeout_str",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_str",
     "location": {
       "column": "18",
-      "line": "293",
+      "line": "296",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "timeout_str",
@@ -97657,13 +97671,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@13674@F@main@verify_cmd",
+    "ID": "c:main.c@13748@F@main@verify_cmd",
     "What": "Variable",
     "defdec": "Def",
     "display": "verify_cmd",
     "location": {
       "column": "26",
-      "line": "352",
+      "line": "355",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "verify_cmd",
@@ -97671,13 +97685,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@13981@F@main@auth_response",
+    "ID": "c:main.c@14055@F@main@auth_response",
     "What": "Variable",
     "defdec": "Def",
     "display": "auth_response",
     "location": {
       "column": "27",
-      "line": "359",
+      "line": "362",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "auth_response",
@@ -97685,13 +97699,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@14246@F@main@timeout_cmd",
+    "ID": "c:main.c@14320@F@main@timeout_cmd",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_cmd",
     "location": {
       "column": "30",
-      "line": "364",
+      "line": "367",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "timeout_cmd",
@@ -97699,13 +97713,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@14604@F@main@timeout_response",
+    "ID": "c:main.c@14678@F@main@timeout_response",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_response",
     "location": {
       "column": "31",
-      "line": "371",
+      "line": "374",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "timeout_response",
@@ -97713,13 +97727,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@19256@F@main@active_buffer",
+    "ID": "c:main.c@19330@F@main@active_buffer",
     "What": "Variable",
     "defdec": "Def",
     "display": "active_buffer",
     "location": {
       "column": "19",
-      "line": "479",
+      "line": "482",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "active_buffer",
@@ -97727,13 +97741,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@23546@F@main@save_response",
+    "ID": "c:main.c@23620@F@main@save_response",
     "What": "Variable",
     "defdec": "Def",
     "display": "save_response",
     "location": {
       "column": "31",
-      "line": "576",
+      "line": "579",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "save_response",
@@ -97741,13 +97755,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@26740@F@main@active_buffer",
+    "ID": "c:main.c@26814@F@main@active_buffer",
     "What": "Variable",
     "defdec": "Def",
     "display": "active_buffer",
     "location": {
       "column": "19",
-      "line": "650",
+      "line": "653",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "active_buffer",
@@ -97755,13 +97769,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@31021@F@main@save_response",
+    "ID": "c:main.c@31095@F@main@save_response",
     "What": "Variable",
     "defdec": "Def",
     "display": "save_response",
     "location": {
       "column": "31",
-      "line": "747",
+      "line": "750",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "save_response",
@@ -97769,13 +97783,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@31939@F@main@verify_cmd",
+    "ID": "c:main.c@32013@F@main@verify_cmd",
     "What": "Variable",
     "defdec": "Def",
     "display": "verify_cmd",
     "location": {
       "column": "34",
-      "line": "764",
+      "line": "767",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "verify_cmd",
@@ -97783,13 +97797,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@32248@F@main@auth_response",
+    "ID": "c:main.c@32322@F@main@auth_response",
     "What": "Variable",
     "defdec": "Def",
     "display": "auth_response",
     "location": {
       "column": "35",
-      "line": "770",
+      "line": "773",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "auth_response",
@@ -97797,13 +97811,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@32528@F@main@timeout_cmd",
+    "ID": "c:main.c@32602@F@main@timeout_cmd",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_cmd",
     "location": {
       "column": "38",
-      "line": "775",
+      "line": "778",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "timeout_cmd",
@@ -97811,13 +97825,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@32852@F@main@timeout_response",
+    "ID": "c:main.c@32926@F@main@timeout_response",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_response",
     "location": {
       "column": "39",
-      "line": "781",
+      "line": "784",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "timeout_response",
@@ -97825,13 +97839,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@37567@F@main@control_response",
+    "ID": "c:main.c@37641@F@main@control_response",
     "What": "Variable",
     "defdec": "Def",
     "display": "control_response",
     "location": {
       "column": "23",
-      "line": "890",
+      "line": "893",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "control_response",
@@ -97839,13 +97853,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@38075@F@main@timeout_display",
+    "ID": "c:main.c@38149@F@main@timeout_display",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_display",
     "location": {
       "column": "26",
-      "line": "902",
+      "line": "905",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "timeout_display",
@@ -97853,13 +97867,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@42516@F@main@control_response",
+    "ID": "c:main.c@42590@F@main@control_response",
     "What": "Variable",
     "defdec": "Def",
     "display": "control_response",
     "location": {
       "column": "31",
-      "line": "1014",
+      "line": "1017",
       "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\main.c"
     },
     "name": "control_response",
@@ -98480,160 +98494,6 @@
     },
     "name": "rename",
     "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@24@macro@UART_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART2_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART2_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_SendChar",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART2_SendChar(char)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_SendChar",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_SendChar",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART2_SendChar(char)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_SendChar",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_ReceiveChar",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char UART2_ReceiveChar(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_ReceiveChar",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_ReceiveChar",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char UART2_ReceiveChar(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_ReceiveChar",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_SendString",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART2_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_SendString",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_SendString",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART2_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_SendString",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_ReceiveCharTimeout",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int UART2_ReceiveCharTimeout(char *, int)",
-    "location": {
-      "column": "5",
-      "line": "17",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_ReceiveCharTimeout",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART2_ReceiveCharTimeout",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int UART2_ReceiveCharTimeout(char *, int)",
-    "location": {
-      "column": "5",
-      "line": "17",
-      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
-    },
-    "name": "UART2_ReceiveCharTimeout",
-    "origin": "user_include",
     "scope": null
   },
   {
@@ -109235,86 +109095,72 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "ID": "c:stdbool.h@96@macro@_STDBOOL",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_YSIZET_H",
+    "display": "_STDBOOL",
     "location": {
       "column": "9",
       "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
     },
-    "name": "_YSIZET_H",
+    "name": "_STDBOOL",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "ID": "c:stdbool.h@200@macro@bool",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_SIZE_T",
+    "display": "bool",
     "location": {
       "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "line": "13",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
     },
-    "name": "_SIZE_T",
+    "name": "bool",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "ID": "c:stdbool.h@225@macro@true",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
+    "display": "true",
     "location": {
       "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "line": "14",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
     },
-    "name": "_STD_USING_SIZE_T",
+    "name": "true",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "ID": "c:stdbool.h@246@macro@false",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
+    "display": "false",
+    "location": {
+      "column": "11",
+      "line": "15",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "false",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@275@macro@__bool_true_false_are_defined",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__bool_true_false_are_defined",
     "location": {
       "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
     },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
+    "name": "__bool_true_false_are_defined",
     "origin": "system_include",
     "scope": null
   },
@@ -109783,72 +109629,240 @@
     "scope": null
   },
   {
-    "ID": "c:stdbool.h@96@macro@_STDBOOL",
+    "ID": "c:uart.h@24@macro@UART_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_STDBOOL",
+    "display": "UART_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_SendChar",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_SendChar(char)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_SendChar",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_SendChar",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_SendChar(char)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_SendChar",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_ReceiveChar",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char UART2_ReceiveChar(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_ReceiveChar",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_ReceiveChar",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char UART2_ReceiveChar(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_ReceiveChar",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_SendString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_SendString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_ReceiveCharTimeout",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int UART2_ReceiveCharTimeout(char *, int)",
+    "location": {
+      "column": "5",
+      "line": "17",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_ReceiveCharTimeout",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART2_ReceiveCharTimeout",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int UART2_ReceiveCharTimeout(char *, int)",
+    "location": {
+      "column": "5",
+      "line": "17",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\uart.h"
+    },
+    "name": "UART2_ReceiveCharTimeout",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
     "location": {
       "column": "9",
       "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
     },
-    "name": "_STDBOOL",
+    "name": "_YSIZET_H",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:stdbool.h@200@macro@bool",
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "bool",
+    "display": "_SIZE_T",
     "location": {
       "column": "11",
-      "line": "13",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
     },
-    "name": "bool",
+    "name": "_SIZE_T",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:stdbool.h@225@macro@true",
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "true",
+    "display": "_STD_USING_SIZE_T",
     "location": {
       "column": "11",
-      "line": "14",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
     },
-    "name": "true",
+    "name": "_STD_USING_SIZE_T",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:stdbool.h@246@macro@false",
-    "What": "MacroDef",
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
     "defdec": "Def",
-    "display": "false",
+    "display": "_Sizet",
     "location": {
-      "column": "11",
-      "line": "15",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
     },
-    "name": "false",
+    "name": "size_t",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:stdbool.h@275@macro@__bool_true_false_are_defined",
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__bool_true_false_are_defined",
+    "display": "__DATA_PTR_MEM_HELPER1__",
     "location": {
       "column": "9",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
     },
-    "name": "__bool_true_false_are_defined",
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
     "origin": "system_include",
     "scope": null
   },
@@ -110228,6 +110242,342 @@
     },
     "name": "DelayMs",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LCD_Clear",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LCD_Clear(void)",
+    "location": {
+      "column": "13",
+      "line": "8",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "LCD_Clear",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LCD_String",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LCD_String(char *)",
+    "location": {
+      "column": "13",
+      "line": "9",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "LCD_String",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LCD_SetCursor",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LCD_SetCursor(uint8_t, uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "10",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "LCD_SetCursor",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@delayMs",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void delayMs(int)",
+    "location": {
+      "column": "13",
+      "line": "11",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "delayMs",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Debug_UART0_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Debug_UART0_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Debug_UART0_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@522@F@Debug_UART0_Init@delay",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "delay",
+    "location": {
+      "column": "18",
+      "line": "17",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "delay",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Debug_Log",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Debug_Log(char *)",
+    "location": {
+      "column": "6",
+      "line": "33",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Debug_Log",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Log_Result",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Log_Result(char *, int)",
+    "location": {
+      "column": "6",
+      "line": "41",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Log_Result",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Test_Receive",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Test_Receive(char *)",
+    "location": {
+      "column": "6",
+      "line": "49",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Test_Receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@1617@F@Test_Receive@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "9",
+      "line": "50",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@1633@F@Test_Receive@timeout",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "timeout",
+    "location": {
+      "column": "9",
+      "line": "51",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "timeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@1822@F@Test_Receive@c",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "c",
+    "location": {
+      "column": "18",
+      "line": "56",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "c",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Test_Initial_Setup",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int Test_Initial_Setup(void)",
+    "location": {
+      "column": "5",
+      "line": "78",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Test_Initial_Setup",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@2393@F@Test_Initial_Setup@response",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "response",
+    "location": {
+      "column": "10",
+      "line": "79",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "response",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Test_Door_Open",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int Test_Door_Open(void)",
+    "location": {
+      "column": "5",
+      "line": "90",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Test_Door_Open",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@2722@F@Test_Door_Open@response",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "response",
+    "location": {
+      "column": "10",
+      "line": "91",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "response",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Test_Access_Denied",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int Test_Access_Denied(void)",
+    "location": {
+      "column": "5",
+      "line": "107",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Test_Access_Denied",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@3169@F@Test_Access_Denied@response",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "response",
+    "location": {
+      "column": "10",
+      "line": "108",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "response",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Test_Lockout_Sequence",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int Test_Lockout_Sequence(void)",
+    "location": {
+      "column": "5",
+      "line": "120",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Test_Lockout_Sequence",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@3528@F@Test_Lockout_Sequence@response",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "response",
+    "location": {
+      "column": "10",
+      "line": "121",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "response",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Test_Timeout_Setting",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int Test_Timeout_Setting(void)",
+    "location": {
+      "column": "5",
+      "line": "155",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Test_Timeout_Setting",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:test_integration.c@4695@F@Test_Timeout_Setting@response",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "response",
+    "location": {
+      "column": "10",
+      "line": "156",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "response",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Test_LCD_Screen",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int Test_LCD_Screen(void)",
+    "location": {
+      "column": "5",
+      "line": "191",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Test_LCD_Screen",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Run_Integration_Tests",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Run_Integration_Tests(void)",
+    "location": {
+      "column": "6",
+      "line": "213",
+      "path": "D:\\University\\7th Semester Senior 1\\Introduction to Enbedded Systems\\Project\\adeem\\HMI\\test_integration.c"
+    },
+    "name": "Run_Integration_Tests",
+    "origin": "project_file",
     "scope": null
   },
   {

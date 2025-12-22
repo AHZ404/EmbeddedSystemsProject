@@ -8,6 +8,8 @@
 #include "adc.h" // <-- NEW: Include the ADC Header
 #include <tm4c123gh6pm.h>
 
+extern void Run_Integration_Tests(void);
+
 // Helper function prototype (defined in lcd.c)
 void delayMs(int n);
 
@@ -132,6 +134,7 @@ int main(void)
     LCD_Clear();
     LCD_String("System Ready!");
     delayMs(1500);
+    Run_Integration_Tests();
 
     PasswordState state = STATE_CREATE_PASS;
     char pass[6] = "";              // Stores the master password (5 digits + '\0')
