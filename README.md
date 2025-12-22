@@ -317,8 +317,7 @@ Edit `Control/uart.c` and `HMI/uart.c`:
 | Default Timeout | 5 seconds |
 | EEPROM Write Time | ~5ms per block |
 
----
-
+--
 ## 🐛 Troubleshooting
 
 ### LCD Not Displaying
